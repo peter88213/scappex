@@ -1,2 +1,2 @@
-# scap2tl
-Export Scapple notes to Timeline
+# scappex
+Export Scapple notes to Timeline and yWriter
