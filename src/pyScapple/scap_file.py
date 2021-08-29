@@ -5,16 +5,18 @@ For further information see https://github.com/peter88213/aeon2yw
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 import os
-import csv
+import xml.etree.ElementTree as ET
 
-from pywriter.file.file_export import FileExport
-from pywriter.model.scene import Scene
+from pywriter.model.novel import Novel
 from pywriter.model.chapter import Chapter
-from pywriter.model.world_element import WorldElement
+from pywriter.model.scene import Scene
 from pywriter.model.character import Character
+from pywriter.model.world_element import WorldElement
+
+from pyScapple.scap_note import ScapNote
 
 
-class ScapFile(FileExport):
+class ScapFile(Novel):
     """File representation of a Scapple file. 
 
     Represents a scap file containing an outline according to the conventions.
@@ -25,7 +27,6 @@ class ScapFile(FileExport):
     EXTENSION = '.scap'
     DESCRIPTION = 'Scapple diagram'
     SUFFIX = ''
-    _SEPARATOR = ','
 
     # Events assigned to the "narrative arc" (case insensitive) become
     # regular scenes, the others become Notes scenes.
@@ -34,202 +35,105 @@ class ScapFile(FileExport):
         """Extend the superclass constructor,
         defining instance variables.
         """
-        FileExport.__init__(self, filePath, **kwargs)
-        self.sceneMarker = kwargs['scene_marker']
-        self.titleLabel = kwargs['title_label']
-        self.sceneLabel = kwargs['scene_label']
-        self.dateTimeLabel = kwargs['date_time_label']
-        self.descriptionLabel = kwargs['description_label']
-        self.notesLabel = kwargs['notes_label']
-        self.tagLabel = kwargs['tag_label']
-        self.locationLabel = kwargs['location_label']
-        self.itemLabel = kwargs['item_label']
-        self.characterLabel = kwargs['character_label']
-        self.exportAllEvents = kwargs['export_all_events']
+        Novel.__init__(self, filePath, **kwargs)
+        self.locationColor = kwargs['location_color']
+        self.itemColor = kwargs['item_color']
+        self.majorCharaColor = kwargs['major_chara_color']
+        self.minorCharaColor = kwargs['minor_chara_color']
+        self.exportScenes = kwargs['export_scenes']
+        self.exportCharacters = kwargs['export_characters']
+        self.exportLocations = kwargs['export_locations']
+        self.exportItems = kwargs['export_items']
 
     def read(self):
-        """Parse the csv file located at filePath, 
-        fetching the Scene attributes contained.
-
-        Create one single chapter containing all scenes.
-
+        """Parse the Scapple xml file, fetching the Novel attributes.
         Return a message beginning with SUCCESS or ERROR.
+        Override the superclass method.
         """
-        self.locationCount = 0
-        self.locIdsByTitle = {}
-        # key = location title
-        # value = location ID
-
-        self.itemCount = 0
-        self.itmIdsByTitle = {}
-        # key = item title
-        # value = item ID
-
-        def get_lcIds(lcTitles):
-            """Return a list of location IDs; Add new location to the project.
-            """
-            lcIds = []
-
-            for lcTitle in lcTitles:
-
-                if lcTitle in self.locIdsByTitle:
-                    lcIds.append(self.locIdsByTitle[lcTitle])
-
-                elif lcTitle:
-                    # Add a new location to the project.
-
-                    self.locationCount += 1
-                    lcId = str(self.locationCount)
-                    self.locIdsByTitle[lcTitle] = lcId
-                    self.locations[lcId] = WorldElement()
-                    self.locations[lcId].title = lcTitle
-                    self.srtLocations.append(lcId)
-                    lcIds.append(lcId)
-
-                else:
-                    return None
-
-            return lcIds
-
-        def get_itIds(itTitles):
-            """Return a list of item IDs; Add new item to the project.
-            """
-            itIds = []
-
-            for itTitle in itTitles:
-
-                if itTitle in self.itmIdsByTitle:
-                    itIds.append(self.itmIdsByTitle[itTitle])
-
-                elif itTitle:
-                    # Add a new item to the project.
-
-                    self.itemCount += 1
-                    itId = str(self.itemCount)
-                    self.itmIdsByTitle[itTitle] = itId
-                    self.items[itId] = WorldElement()
-                    self.items[itId].title = itTitle
-                    self.srtItems.append(itId)
-                    itIds.append(itId)
-
-                else:
-                    return None
-
-            return itIds
-
-        self.characterCount = 0
-        self.chrIdsByTitle = {}
-        # key = character title
-        # value = character ID
-
-        def get_crIds(crTitles):
-            """Return a list of character IDs; Add new characters to the project.
-            """
-            crIds = []
-
-            for crTitle in crTitles:
-
-                if crTitle in self.chrIdsByTitle:
-                    crIds.append(self.chrIdsByTitle[crTitle])
-
-                elif crTitle:
-                    # Add a new character to the project.
-
-                    self.characterCount += 1
-                    crId = str(self.characterCount)
-                    self.chrIdsByTitle[crTitle] = crId
-                    self.characters[crId] = Character()
-                    self.characters[crId].title = crTitle
-                    self.srtCharacters.append(crId)
-                    crIds.append(crId)
-
-                else:
-                    return None
-
-            return crIds
-
-        self.rows = []
-
-        #--- Read the csv file.
-
         try:
-            with open(self.filePath, newline='', encoding='utf-8') as f:
-                reader = csv.DictReader(f, delimiter=self._SEPARATOR)
-
-                chId = '1'
-                self.chapters[chId] = Chapter()
-                self.chapters[chId].title = 'Chapter 1'
-                self.srtChapters = [chId]
-
-                scIdsByDate = {}
-                eventCount = 0
-
-                for row in reader:
-                    eventCount += 1
-
-                    if self.sceneMarker == '':
-                        noScene = False
-
-                    elif not self.sceneMarker in row[self.sceneLabel]:
-                        noScene = True
-
-                        if not self.exportAllEvents:
-                            continue
-
-                    else:
-                        noScene = False
-
-                    scId = str(eventCount)
-                    self.scenes[scId] = Scene()
-                    self.scenes[scId].isNotesScene = noScene
-                    self.scenes[scId].title = row[self.titleLabel]
-
-                    if not row[self.dateTimeLabel] in scIdsByDate:
-                        scIdsByDate[row[self.dateTimeLabel]] = []
-
-                    scIdsByDate[row[self.dateTimeLabel]].append(scId)
-                    dt = row[self.dateTimeLabel].split(' ')
-                    self.scenes[scId].date = dt[0]
-                    self.scenes[scId].time = dt[1]
-
-                    if self.descriptionLabel in row:
-                        self.scenes[scId].desc = row[self.descriptionLabel]
-
-                    if self.notesLabel in row:
-                        self.scenes[scId].sceneNotes = row[self.notesLabel]
-
-                    if self.tagLabel in row and row[self.tagLabel] != '':
-                        self.scenes[scId].tags = row[self.tagLabel].split('|')
-
-                    if self.locationLabel in row:
-                        self.scenes[scId].locations = get_lcIds(row[self.locationLabel].split('|'))
-
-                    if self.characterLabel in row:
-                        self.scenes[scId].characters = get_crIds(row[self.characterLabel].split('|'))
-
-                    if self.itemLabel in row:
-                        self.scenes[scId].items = get_itIds(row[self.itemLabel].split('|'))
-
-                    # Set scene status = "Outline".
-
-                    self.scenes[scId].status = 1
-
-        except(FileNotFoundError):
-            return 'ERROR: "' + os.path.normpath(self.filePath) + '" not found.'
-
-        except(KeyError):
-            return 'ERROR: Wrong csv structure.'
+            self.tree = ET.parse(self.filePath)
 
         except:
-            return 'ERROR: Can not parse "' + os.path.normpath(self.filePath) + '".'
+            return 'ERROR: Can not process "' + os.path.normpath(self.filePath) + '".'
 
-        # Sort scenes by date/time
+        root = self.tree.getroot()
 
-        srtScenes = sorted(scIdsByDate.items())
+        # Create a single chapter and assign all scenes to it.
 
-        for date, scList in srtScenes:
+        chId = '1'
+        self.chapters[chId] = Chapter()
+        self.chapters[chId].title = 'Chapter 1'
+        self.srtChapters = [chId]
 
-            for scId in scList:
-                self.chapters[chId].srtScenes.append(scId)
+        # Parse Scapple notes.
 
-        return 'SUCCESS: Data read from "' + os.path.normpath(self.filePath) + '".'
+        scapNotes = {}
+
+        for xmlNote in root.iter('Note'):
+            note = ScapNote(xmlNote)
+            scapNotes[note.uid] = note
+
+            # Create Novel elements.
+
+            if note.isScene:
+
+                if self.exportScenes:
+                    scene = Scene()
+
+                    scene.title = note.text
+                    self.scenes[note.uid] = scene
+                    self.chapters[chId].srtScenes.append(note.uid)
+
+            elif note.color == self.majorCharaColor:
+
+                if self.exportCharacters:
+                    character = Character()
+                    character.title = note.text
+                    character.isMajor = True
+                    self.characters[note.uid] = character
+                    self.srtCharacters.append(note.uid)
+
+            elif note.color == self.minorCharaColor:
+
+                if self.exportCharacters:
+                    character = Character()
+                    character.title = note.text
+                    character.isMajor = False
+                    self.characters[note.uid] = character
+                    self.srtCharacters.append(note.uid)
+
+            elif note.color == self.locationColor:
+
+                if self.exportLocations:
+                    location = WorldElement()
+                    location.title = note.text
+                    self.locations[note.uid] = location
+                    self.srtLocations.append(note.uid)
+
+            elif note.color == self.itemColor:
+
+                if self.exportItems:
+                    item = WorldElement()
+                    item.title = note.text
+                    self.items[note.uid] = item
+                    self.srtItems.append(note.uid)
+
+        # Assign characters/locations/items to the scenes.
+
+        for scId in self.scenes:
+            self.scenes[scId].characters = []
+            self.scenes[scId].locations = []
+            self.scenes[scId].items = []
+
+            for uid in scapNotes[scId].connections:
+
+                if uid in self.characters:
+                    self.scenes[scId].characters.append(uid)
+
+                elif uid in self.locations:
+                    self.scenes[scId].locations.append(uid)
+
+                elif uid in self.items:
+                    self.scenes[scId].items.append(uid)
+
+        return 'SUCCESS'

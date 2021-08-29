@@ -20,21 +20,23 @@ from pyScapple.scap_converter import ScapConverter
 SUFFIX = ''
 APPNAME = 'scappex'
 
+GREEN = '0.058824 0.458824 0.011765'
+BLUE = '0.0 0.011765 1.0'
+RED = '0.984314 0.015686 0.027451'
+PURPLE = '0.498039 0.015686 0.498039'
+
 SETTINGS = dict(
-    scene_marker='Scene',
-    scene_label='Tags',
-    title_label='Title',
-    date_time_label='Start Date',
-    description_label='Description',
-    notes_label='Notes',
-    tag_label='Arc',
-    location_label='Location',
-    item_label='Item',
-    character_label='Participant'
+    location_color=BLUE,
+    item_color=GREEN,
+    major_chara_color=RED,
+    minor_chara_color=PURPLE,
 )
 
 OPTIONS = dict(
-    export_all_events=True,
+    export_scenes=True,
+    export_characters=True,
+    export_locations=True,
+    export_items=True,
 )
 
 
