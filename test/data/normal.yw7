@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<YWRITER7>
+  <PROJECT>
+    <Ver>7</Ver>
+  </PROJECT>
+	<LOCATIONS>
+	<LOCATION>
+		<ID>2</ID>
+		<Title><![CDATA[Location 1]]></Title>
+		<SortOrder>1</SortOrder>
+	</LOCATION>
+	<LOCATION>
+		<ID>3</ID>
+		<Title><![CDATA[Location 2]]></Title>
+		<SortOrder>2</SortOrder>
+	</LOCATION>
+	</LOCATIONS>
+	<ITEMS>
+	<ITEM>
+		<ID>1</ID>
+		<Title><![CDATA[Item 1]]></Title>
+		<SortOrder>1</SortOrder>
+	</ITEM>
+	<ITEM>
+		<ID>2</ID>
+		<Title><![CDATA[Item 2]]></Title>
+		<SortOrder>2</SortOrder>
+	</ITEM>
+	</ITEMS>
+	<CHARACTERS>
+	<CHARACTER>
+		<ID>1</ID>
+		<Title><![CDATA[Major Character 1]]></Title>
+		<ImageFile><![CDATA[4a9b4ff0f715a8e3835f7eac4c40cd54.jpg]]></ImageFile>
+		<SortOrder>1</SortOrder>
+		<FullName><![CDATA[Major Character 1]]></FullName>
+		<Major>-1</Major>
+	</CHARACTER>
+	<CHARACTER>
+		<ID>2</ID>
+		<Title><![CDATA[Major Character 2]]></Title>
+		<SortOrder>2</SortOrder>
+		<FullName><![CDATA[Major Character 2]]></FullName>
+		<Major>-1</Major>
+	</CHARACTER>
+	<CHARACTER>
+		<ID>3</ID>
+		<Title><![CDATA[Minor Character 1]]></Title>
+		<SortOrder>3</SortOrder>
+		<FullName><![CDATA[Minor Character 1]]></FullName>
+	</CHARACTER>
+	<CHARACTER>
+		<ID>4</ID>
+		<Title><![CDATA[Minor Character 2]]></Title>
+		<SortOrder>4</SortOrder>
+		<FullName><![CDATA[Minor Character 2]]></FullName>
+	</CHARACTER>
+	</CHARACTERS>
+	<SCENES>
+	<SCENE>
+		<ID>1</ID>
+		<Title><![CDATA[scene 1]]></Title>
+		<ImageFile><![CDATA[p3290015.jpg]]></ImageFile>
+		<Notes><![CDATA[This is a scene note]]></Notes>
+		<BelongsToChID>1</BelongsToChID>
+		<Field1>1</Field1>
+		<Field2>1</Field2>
+		<Field3>1</Field3>
+		<Field4>1</Field4>
+		<Status>1</Status>
+		<WordCount>0</WordCount>
+		<LetterCount>0</LetterCount>
+		<Characters>
+			<CharID>1</CharID>
+			<CharID>2</CharID>
+			<CharID>3</CharID>
+		</Characters>
+		<Locations>
+			<LocID>2</LocID>
+		</Locations>
+		<Items>
+			<ItemID>1</ItemID>
+			<ItemID>2</ItemID>
+		</Items>
+      <SceneContent />
+	</SCENE>
+	<SCENE>
+		<ID>2</ID>
+		<Title><![CDATA[scene 2]]></Title>
+		<BelongsToChID>1</BelongsToChID>
+		<Field1>1</Field1>
+		<Field2>1</Field2>
+		<Field3>1</Field3>
+		<Field4>1</Field4>
+		<Status>1</Status>
+		<WordCount>0</WordCount>
+		<LetterCount>0</LetterCount>
+		<Characters>
+			<CharID>2</CharID>
+			<CharID>3</CharID>
+			<CharID>4</CharID>
+		</Characters>
+		<Locations>
+			<LocID>3</LocID>
+		</Locations>
+		<Items>
+			<ItemID>2</ItemID>
+		</Items>
+      <SceneContent />
+	</SCENE>
+	</SCENES>
+	<CHAPTERS>
+	<CHAPTER>
+		<ID>1</ID>
+		<Title><![CDATA[Chapter 1]]></Title>
+		<SortOrder>1</SortOrder>
+		<Scenes>
+			<ScID>1</ScID>
+			<ScID>2</ScID>
+		</Scenes>
+	</CHAPTER>
+	</CHAPTERS>
+</YWRITER7>
