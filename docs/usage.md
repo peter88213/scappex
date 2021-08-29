@@ -49,7 +49,7 @@ The scappex distribution comes with a sample Scapple project *styles.scap* inclu
 
 ![Screenshot: Import styles dialog](Screenshots/import_styles.png)
 
-In the file picker dialog, select ´<unzipped scappex release folder>\sample\styles.scap´. Then you can apply the styles via context menu.
+In the file picker dialog, select `<unzipped scappex release folder>\sample\styles.scap`. Then you can apply the styles via context menu.
 
 ![Screenshot: Apply style menu](Screenshots/apply_styles.png)
 
