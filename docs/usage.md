@@ -34,12 +34,12 @@ The path of the Scapple outline file.
 The column labels refer to the example timeline "Murder on the Orient Express". 
 
 - Notes with a shadow are converted to regular scenes. 
-- Notes with red text are converted to major characters. Tick the big red field above the text color swatch in the Inspector.
-- Notes with purple text are converted to minor characters. Tick the big purple field above the text color swatch in the Inspector.
+- Notes with red text are converted to major characters.
+- Notes with purple text are converted to minor characters.
 - Notes with blue text are converted to locations. 
-- Notes with green text are converted to items. Tick the big green field above the text color swatch in the Inspector.
+- Notes with green text are converted to items.
 - Assign characters/locations/items to a scene by connecting the corresponding notes.
-- Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. It a scene is pointed to by several characters, or by no character, the viewpoint is random.
+- Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. If a scene is pointed to by several characters, or by no character, the viewpoint is random.
 
 ## How to mark notes for export
 
