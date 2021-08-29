@@ -91,6 +91,7 @@ class ScapFile(Novel):
                 if self.exportCharacters:
                     character = Character()
                     character.title = note.text
+                    character.fullName = note.text
                     character.isMajor = True
                     self.characters[note.uid] = character
                     self.srtCharacters.append(note.uid)
@@ -100,6 +101,7 @@ class ScapFile(Novel):
                 if self.exportCharacters:
                     character = Character()
                     character.title = note.text
+                    character.fullName = note.text
                     character.isMajor = False
                     self.characters[note.uid] = character
                     self.srtCharacters.append(note.uid)

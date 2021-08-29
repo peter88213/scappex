@@ -32,22 +32,26 @@
       <ID>2</ID>
       <Title><![CDATA[Major Character 1]]></Title>
       <SortOrder>1</SortOrder>
+      <FullName><![CDATA[Major Character 1]]></FullName>
       <Major>-1</Major>
     </CHARACTER>
     <CHARACTER>
       <ID>3</ID>
       <Title><![CDATA[Minor Character 1]]></Title>
       <SortOrder>2</SortOrder>
+      <FullName><![CDATA[Minor Character 1]]></FullName>
     </CHARACTER>
     <CHARACTER>
       <ID>4</ID>
       <Title><![CDATA[Minor Character 2]]></Title>
       <SortOrder>3</SortOrder>
+      <FullName><![CDATA[Minor Character 2]]></FullName>
     </CHARACTER>
     <CHARACTER>
       <ID>5</ID>
       <Title><![CDATA[Major Character 2]]></Title>
       <SortOrder>4</SortOrder>
+      <FullName><![CDATA[Major Character 2]]></FullName>
       <Major>-1</Major>
     </CHARACTER>
   </CHARACTERS>
