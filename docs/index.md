@@ -1,8 +1,11 @@
-Generate a yWriter 7 project from a Scapple outline. 
+[yWriter](http://spacejock.com/yWriter7.html) is a free word processor written by Australian author and programmer Simon Haynes. 
+[Scapple](https://www.literatureandlatte.com/scapple/overview) is a commercial free-form diagramming software for visualizing entities and relationships of all kinds. *Scappex* is a Python script that exports outlines made with Scapple to new yWriter projects.
 
 ![Screenshot: Example](Screenshots/screen01.png)
 
-- Shaded notes are converted to scenes in one single chapter.
+## Features
+
+- Notes with a shadow are converted to regular scenes in one single chapter.
 - Notes with colored text are converted to characters, locations, or items.
 - Connections between scenes and characters/locations/items are considered.
 
