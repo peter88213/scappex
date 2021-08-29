@@ -8,7 +8,7 @@ The scappex Python script creates a yWriter 7 project from a Scapple outline.
 
 ### Intended usage
 
-The included installation script prompts you to create a shortcut on the desktop. You can launch the program by dragging a csv file and dropping it on the shortcut icon. 
+The included installation script prompts you to create a shortcut on the desktop. You can launch the program by dragging a *scap* file and dropping it on the shortcut icon. 
 
 ### Command line usage
 
