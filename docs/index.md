@@ -11,8 +11,8 @@ Generate a yWriter 7 project from a Scapple outline.
 
 - Windows.
 - [Python 3](https://www.python.org). Python 3.4 or more recent will work. However, Python 3.7 or above is highly recommended.
-- [yWriter](http://spacejock.com/yWriter7.html).
-- [Scapple](https://www.literatureandlatte.com/scapple/overview).
+- [yWriter 7](http://spacejock.com/yWriter7.html).
+- [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
 
 
 ## Download and install

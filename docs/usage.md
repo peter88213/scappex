@@ -49,7 +49,7 @@ An optional project configuration file named `scappex.ini` can be placed in your
 
 The scappex distribution comes with a sample configuration file located in the `sample` subfolder. It contains scappex's default settings and options. This file is also automatically copied to the global configuration folder during installation. You best make a copy and edit it.
 
-- The SETTINGS section mainly refers to "labels", i.e. The csv field contents of the first row, which denote the columns. They might have to be adapted to your specific Aeon project and export settings. If you change them, the program might behave differently than described in the description of the conversion rules below. Make sure the indicated csv fields contain data that can be processed by yWriter.
+- The SETTINGS section mainly refers to colors, i.e. The text colors that mark the characters/locations/items in Scapple. If you change them, the program might behave differently than described in the description of the conversion rules below. 
 - The OPTIONS section comprises options for regular program execution. 
 - Comment lines begin with a `#` number sign. In the example, they refer to the code line immediately above.
 
@@ -57,69 +57,23 @@ This is the configuration explained:
 
 ```
 [SETTINGS]
+location_color = 0.0 0.011765 1.0
+# Blue
 
-scene_marker = Scene
+item_color = 0.058824 0.458824 0.011765
+# Green
 
-# String that indicates an event to be exported as normal
-# scene, if "export_all_events" is "No"
-# If the scene marker is left blank, all events will be
-# imported as normal scenes.
-# In this case, the entry looks like "scene_marker ="
+major_chara_color = 0.984314 0.015686 0.027451
+# Red
 
-scene_label = Tags
-
-# Label of the csv field that contains the "scene_marker"
-# indicator.
-
-title_label = Title
-
-# Label of the csv field whose contents are exported
-# as the scene's title to yWriter.
-
-date_time_label = Start Date
-
-# Label of the csv field whose contents are exported
-# as the scene's date/time to yWriter.
-
-description_label = Description
-
-# Label of the csv field whose contents are exported
-# as the scene's description to yWriter.
-
-notes_label = Notes
-
-# Label of the csv field whose contents are exported
-# as the scene's notes to yWriter.
-
-tag_label = Arc
-
-# Label of the csv field whose contents are exported
-# as the scene's tags to yWriter.
-
-location_label = Location
-
-# Label of the csv field whose contents are exported
-# as the scene's locations to yWriter.
-
-item_label = Item
-
-# Label of the csv field whose contents are exported
-# as the scene's items to yWriter.
-
-character_label = Participant
-
-# Label of the csv field whose contents are exported
-# as the scene's characters to yWriter.
+minor_chara_color = 0.498039 0.015686 0.498039
+# Purple
 
 [OPTIONS]
-
-export_all_events = Yes
-
-# Yes: Export non-scene events as "Notes" type scenes
-#      to yWriter.
-# No:  Do not export non-scene events to yWriter.
-# This option exists only if the scene marker is not
-# left blank.
+export_scenes = Yes
+export_characters = Yes
+export_locations = Yes
+export_items = Yes
 
 ```
 
@@ -127,22 +81,15 @@ export_all_events = Yes
 
 The column labels refer to the example timeline "Murder on the Orient Express". 
 
--   All events tagged as "Scene" (*) (case sensitive) are converted to regular scenes.
--   All events not tagged as "Scene" (*) are converted to "Notes" scenes.
--   All scenes are placed in a single chapter.
--   All scenes are sorted chronologically (Note: "BC" is not evaluated). 
--   The scene status is "Outline". 
--	The event title is used as scene title (*).
-- 	The start date is used as scene date/time (*).
--	Duration and end date are not used.
--   "Descriptions" are used as scene descriptions, if any (*).
--   "Notes" are used as scene notes, if any (*).
--	"Arcs" are converted to scene tags, if any (*).
--	"Participants" are imported as characters, if any (*).
--	"Locations" are imported, if any (*).
--	"Items" are imported, if any (*).
-
-(*) Applies to the default configuration, but can be customized. 
+- Notes with a shadow are converted to regular scenes. Tick "Shadow" in the Inspector to mark the note as scene.
+  ![Screenshot: Set text color](Screenshots/mark_scene.png)
+- Notes with red text are converted to major characters. Tick the big red field above the text color swatch in the Inspector.
+- Notes with purple text are converted to minor characters. Tick the big purple field above the text color swatch in the Inspector.
+- Notes with blue text are converted to locations. Tick the big blue field above the text color swatch in the Inspector.
+  ![Screenshot: Set text color](Screenshots/mark_location.png)
+- Notes with green text are converted to items. Tick the big green field above the text color swatch in the Inspector.
+- Assign characters/locations/items to a scene by connecting the corresponding notes.
+- Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. It a scene is pointed to by several characters, or by no character, the viewpoint is random.
 
 
 ## Installation path
