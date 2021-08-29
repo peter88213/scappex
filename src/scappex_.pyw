@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Aeon Timeline 2 csv to yWriter converter 
+"""Scapple to yWriter converter 
 
 Version @release
 Requires Python 3.7 or above
 
 Copyright (c) 2021 Peter Triesberger
-For further information see https://github.com/peter88213/Paeon
+For further information see https://github.com/peter88213/Scappex
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 import os
@@ -15,10 +15,10 @@ from pywriter.ui.ui import Ui
 from pywriter.ui.ui_tk import UiTk
 from pywriter.config.configuration import Configuration
 
-from pywaeon.csv.csv_converter import CsvConverter
+from pyScapple.scap_converter import ScapConverter
 
 SUFFIX = ''
-APPNAME = 'aeon2yw'
+APPNAME = 'scappex'
 
 SETTINGS = dict(
     scene_marker='Scene',
@@ -44,7 +44,7 @@ def run(sourcePath, silentMode=True, installDir=''):
         ui = Ui('')
 
     else:
-        ui = UiTk('csv timeline to yWriter converter @release')
+        ui = UiTk('Scapple to yWriter converter @release')
 
     #--- Try to get persistent configuration data
 
@@ -68,7 +68,7 @@ def run(sourcePath, silentMode=True, installDir=''):
     kwargs.update(configuration.settings)
     kwargs.update(configuration.options)
 
-    converter = CsvConverter()
+    converter = ScapConverter()
     converter.ui = ui
     converter.run(sourcePath, **kwargs)
     ui.start()
@@ -76,11 +76,11 @@ def run(sourcePath, silentMode=True, installDir=''):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description='Aeon Timeline 2 csv to yWriter converter',
+        description='Scapple to yWriter converter',
         epilog='')
     parser.add_argument('sourcePath',
                         metavar='Sourcefile',
-                        help='The path of the csv timeline file.')
+                        help='The path of the Scapple file.')
 
     parser.add_argument('--silent',
                         action="store_true",
