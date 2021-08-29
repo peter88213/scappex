@@ -91,7 +91,6 @@ class NormalOperation(unittest.TestCase):
         self.assertEqual(read_file(TEST_YW7), read_file(NORMAL_YW7))
 
     def tearDown(self):
-        return
         remove_all_testfiles()
 
 

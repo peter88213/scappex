@@ -42,19 +42,41 @@ class ScapNote():
         # Create a list of connected notes.
 
         self.connections = []
-        connText = xmlNote.find('ConnectedNoteIDs').text
-        connGroups = connText.split(', ')
 
-        for conn in connGroups:
+        if xmlNote.find('ConnectedNoteIDs') is not None:
+            connGroups = xmlNote.find('ConnectedNoteIDs').text.split(', ')
 
-            if '-' in conn:
-                conns = conn.split('-')
-                start = int(conns[0]) + 1
-                end = int(conns[1]) + 2
+            for connText in connGroups:
 
-                for i in range(start, end):
+                if '-' in connText:
+                    conns = connText.split('-')
+                    start = int(conns[0]) + 1
+                    end = int(conns[1]) + 2
+
+                    for i in range(start, end):
+                        self.connections.append(str(i))
+
+                else:
+                    i = int(connText) + 1
                     self.connections.append(str(i))
 
-            else:
-                i = int(conn) + 1
-                self.connections.append(str(i))
+        # Create a list of notes pointed to.
+
+        self.pointTo = []
+
+        if xmlNote.find('PointsToNoteIDs') is not None:
+            pointGroups = xmlNote.find('PointsToNoteIDs').text.split(', ')
+
+            for pointText in pointGroups:
+
+                if '-' in pointText:
+                    points = pointText.split('-')
+                    start = int(points[0]) + 1
+                    end = int(points[1]) + 2
+
+                    for i in range(start, end):
+                        self.pointTo.append(str(i))
+
+                else:
+                    i = int(pointText) + 1
+                    self.pointTo.append(str(i))

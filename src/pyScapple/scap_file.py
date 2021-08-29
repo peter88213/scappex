@@ -79,8 +79,10 @@ class ScapFile(Novel):
 
                 if self.exportScenes:
                     scene = Scene()
-
                     scene.title = note.text
+                    scene.status = 1
+                    # Status = Outline
+
                     self.scenes[note.uid] = scene
                     self.chapters[chId].srtScenes.append(note.uid)
 
@@ -128,7 +130,12 @@ class ScapFile(Novel):
             for uid in scapNotes[scId].connections:
 
                 if uid in self.characters:
-                    self.scenes[scId].characters.append(uid)
+
+                    if scId in scapNotes[uid].pointTo:
+                        self.scenes[scId].characters.insert(0, uid)
+
+                    else:
+                        self.scenes[scId].characters.append(uid)
 
                 elif uid in self.locations:
                     self.scenes[scId].locations.append(uid)

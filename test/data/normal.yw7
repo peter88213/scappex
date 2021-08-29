@@ -59,6 +59,7 @@
       <SceneContent />
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
+      <Status>1</Status>
       <Characters>
         <CharID>2</CharID>
         <CharID>3</CharID>
@@ -79,10 +80,11 @@
       <SceneContent />
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
+      <Status>1</Status>
       <Characters>
+        <CharID>5</CharID>
         <CharID>3</CharID>
         <CharID>4</CharID>
-        <CharID>5</CharID>
       </Characters>
       <Locations>
         <LocID>8</LocID>
