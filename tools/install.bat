@@ -8,7 +8,7 @@ copy %app%.pyw %appdir%
 set cnfdir="%APPDATA%\PyWriter\%app%\config"
 if not exist %cnfdir% md %cnfdir%
 
-echo "N" | copy/-Y sample\*.* %cnfdir%
+echo "N" | copy/-Y sample\*.ini %cnfdir%
 
 if exist %USERPROFILE%\Desktop\%app%.lnk goto :end
 

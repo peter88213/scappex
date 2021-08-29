@@ -29,6 +29,54 @@ The path of the Scapple outline file.
 
 `--silent`  suppress error messages and the request to confirm overwriting
 
+## Conversion rules
+
+The column labels refer to the example timeline "Murder on the Orient Express". 
+
+- Notes with a shadow are converted to regular scenes. 
+- Notes with red text are converted to major characters. Tick the big red field above the text color swatch in the Inspector.
+- Notes with purple text are converted to minor characters. Tick the big purple field above the text color swatch in the Inspector.
+- Notes with blue text are converted to locations. 
+- Notes with green text are converted to items. Tick the big green field above the text color swatch in the Inspector.
+- Assign characters/locations/items to a scene by connecting the corresponding notes.
+- Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. It a scene is pointed to by several characters, or by no character, the viewpoint is random.
+
+## How to mark notes for export
+
+### Import styles (optional)
+
+The scappex distribution comes with a sample Scapple project *styles.scap* including all required styles. You can either use this diagram as a template, or import the styles into your own Scapple diagram. 
+
+![Screenshot: Import styles dialog](Screenshots/import_styles.png)
+
+In the file picker dialog, select ´<unzipped scappex release folder>\sample\styles.scap´. Then you can apply the styles via context menu.
+
+![Screenshot: Apply style menu](Screenshots/apply_styles.png)
+
+### Mark scenes
+
+Either apply the "Scene" style, if any, via context menu, or tick "Shadow" in the Inspector to mark the note as scene.
+
+![Screenshot: Set note shadow](Screenshots/mark_scene.png)
+
+### Mark locations
+
+Either apply the "Location" style, if any, via context menu, or tick the big blue field above the text color swatch in the Inspector.
+
+![Screenshot: Set text color](Screenshots/mark_location.png)
+
+### Mark major characters
+
+Either apply the "Major character" style, if any, via context menu, or tick the big red field above the text color swatch in the Inspector.
+
+### Mark minor characters
+
+Either apply the "Minor character" style, if any, via context menu, or tick the big purple field above the text color swatch in the Inspector.
+
+### Mark items
+
+Either apply the "Item" style, if any, via context menu, or tick the big green field above the text color swatch in the Inspector.
+
 
 ## Custom configuration
 
@@ -76,21 +124,6 @@ export_locations = Yes
 export_items = Yes
 
 ```
-
-## Conversion rules
-
-The column labels refer to the example timeline "Murder on the Orient Express". 
-
-- Notes with a shadow are converted to regular scenes. Tick "Shadow" in the Inspector to mark the note as scene.
-  ![Screenshot: Set text color](Screenshots/mark_scene.png)
-- Notes with red text are converted to major characters. Tick the big red field above the text color swatch in the Inspector.
-- Notes with purple text are converted to minor characters. Tick the big purple field above the text color swatch in the Inspector.
-- Notes with blue text are converted to locations. Tick the big blue field above the text color swatch in the Inspector.
-  ![Screenshot: Set text color](Screenshots/mark_location.png)
-- Notes with green text are converted to items. Tick the big green field above the text color swatch in the Inspector.
-- Assign characters/locations/items to a scene by connecting the corresponding notes.
-- Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. It a scene is pointed to by several characters, or by no character, the viewpoint is random.
-
 
 ## Installation path
 
