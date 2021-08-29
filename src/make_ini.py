@@ -11,9 +11,9 @@ import sys
 import os
 
 from pywriter.config.configuration import Configuration
-from scappex import SETTINGS
-from scappex import OPTIONS
-from scappex import APPNAME
+from scappex_ import SETTINGS
+from scappex_ import OPTIONS
+from scappex_ import APPNAME
 
 
 def run(iniFile):
