@@ -1,5 +1,5 @@
 # scappex
-Export Scapple notes to Timeline and yWriter
+Generate a yWriter 7 project from a Scapple outline.
 
 For more information, see the [project homepage](https://peter88213.github.io/scappex) with description and download instructions.
 
