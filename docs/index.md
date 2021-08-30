@@ -7,6 +7,7 @@
 
 - Notes with a shadow are converted to scenes in one single chapter.
 - Notes with a "cloud" border and shadow are converted to "Notes" scenes.
+- Notes with a square border are converted to tags.
 - Notes with colored text are converted to characters, locations, or items.
 - Connections between scenes and characters/locations/items are considered.
 
@@ -21,9 +22,9 @@
 
 ## Download and install
 
-[Download the latest release (version 0.4.1)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.4.1.zip)
+[Download the latest release (version 0.6.0)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.6.0.zip)
 
-- Unzip the downloaded zipfile "scappex_v0.4.1.zip" into a new folder.
+- Unzip the downloaded zipfile "scappex_v0.6.0.zip" into a new folder.
 - Move into this new folder and launch **install.bat**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for usage instructions.

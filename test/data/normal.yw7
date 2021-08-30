@@ -7,11 +7,13 @@
     <LOCATION>
       <ID>6</ID>
       <Title><![CDATA[Location 1]]></Title>
+      <Tags />
       <SortOrder>1</SortOrder>
     </LOCATION>
     <LOCATION>
       <ID>8</ID>
       <Title><![CDATA[Location 2]]></Title>
+      <Tags><![CDATA[Tag 2]]></Tags>
       <SortOrder>2</SortOrder>
     </LOCATION>
   </LOCATIONS>
@@ -19,11 +21,13 @@
     <ITEM>
       <ID>9</ID>
       <Title><![CDATA[Item 1]]></Title>
+      <Tags />
       <SortOrder>1</SortOrder>
     </ITEM>
     <ITEM>
       <ID>10</ID>
       <Title><![CDATA[Item 2]]></Title>
+      <Tags><![CDATA[Tag 1]]></Tags>
       <SortOrder>2</SortOrder>
     </ITEM>
   </ITEMS>
@@ -32,6 +36,7 @@
       <ID>2</ID>
       <Title><![CDATA[Major Character 1]]></Title>
       <SortOrder>1</SortOrder>
+      <Tags />
       <FullName><![CDATA[Major Character 1]]></FullName>
       <Major>-1</Major>
     </CHARACTER>
@@ -39,18 +44,21 @@
       <ID>3</ID>
       <Title><![CDATA[Minor Character 1]]></Title>
       <SortOrder>2</SortOrder>
+      <Tags />
       <FullName><![CDATA[Minor Character 1]]></FullName>
     </CHARACTER>
     <CHARACTER>
       <ID>4</ID>
       <Title><![CDATA[Minor Character 2]]></Title>
       <SortOrder>3</SortOrder>
+      <Tags><![CDATA[Tag 2]]></Tags>
       <FullName><![CDATA[Minor Character 2]]></FullName>
     </CHARACTER>
     <CHARACTER>
       <ID>5</ID>
       <Title><![CDATA[Major Character 2]]></Title>
       <SortOrder>4</SortOrder>
+      <Tags><![CDATA[Tag 3]]></Tags>
       <FullName><![CDATA[Major Character 2]]></FullName>
       <Major>-1</Major>
     </CHARACTER>
@@ -64,6 +72,7 @@
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
       <Status>1</Status>
+      <Tags><![CDATA[Tag 3;Tag 4]]></Tags>
       <Characters>
         <CharID>2</CharID>
         <CharID>3</CharID>
@@ -85,6 +94,7 @@
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
       <Status>1</Status>
+      <Tags><![CDATA[Tag 1]]></Tags>
       <Characters>
         <CharID>5</CharID>
         <CharID>3</CharID>
@@ -108,6 +118,7 @@
         <Field_SceneType>1</Field_SceneType>
       </Fields>
       <Status>1</Status>
+      <Tags />
       <Characters />
       <Locations>
         <LocID>6</LocID>

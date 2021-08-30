@@ -35,11 +35,13 @@ The column labels refer to the example timeline "Murder on the Orient Express".
 
 - Notes with a shadow are converted to scenes. 
 - Notes with a shadow and "cloud" border are converted to "Notes" scenes. 
+- Notes with a square border are converted to tags.
 - Notes with red text are converted to major characters.
 - Notes with purple text are converted to minor characters.
 - Notes with blue text are converted to locations. 
 - Notes with green text are converted to items.
 - Assign characters/locations/items to a scene by connecting the corresponding notes.
+- Assign tags to scenes/characters/locations/items by connecting the corresponding notes.
 - Assign a viewpoint character to a scene by creating an arrow pointing from the character to the scene. If a scene is pointed to by several characters, or by no character, the viewpoint is random.
 
 ## How to mark notes for export
@@ -59,6 +61,12 @@ In the file picker dialog, select `<unzipped scappex release folder>\sample\styl
 Either apply the "Scene" style, if any, via context menu, or tick "Shadow" in the Inspector to mark the note as scene.
 
 ![Screenshot: Set note shadow](Screenshots/mark_scene.png)
+
+To make the scene a "Notes" scene, either apply the "NotesScene" style, or make its border style "Cloud" in the Inspector.
+
+### Mark tags
+
+Either apply the "Tag" style, if any, via context menu, or make the note's border style "Square" in the Inspector.
 
 ### Mark locations
 

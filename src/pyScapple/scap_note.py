@@ -14,6 +14,9 @@ class ScapNote():
         """Parse a single Scapple note.
         Extend the superclass method.
         """
+        self.isTag = False
+        self.isScene = False
+        self.isNotesScene = False
         self.text = xmlNote.find('String').text
 
         # Set UID.
@@ -30,7 +33,6 @@ class ScapNote():
 
             # Shadowed notes with "Cloud" border represent "notes" scenes.
 
-            self.isNotesScene = False
             border = appearance.find('Border')
 
             if border is not None:
@@ -39,7 +41,6 @@ class ScapNote():
                     self.isNotesScene = True
 
         else:
-            self.isScene = False
             appearance = xmlNote.find('Appearance')
             color = appearance.find('TextColor')
 
@@ -48,6 +49,16 @@ class ScapNote():
 
             else:
                 self.color = ''
+
+            # Notes with a square border represent tags.
+
+            appearance = xmlNote.find('Appearance')
+            border = appearance.find('Border')
+
+            if border is not None:
+
+                if border.attrib['Style'] == 'Square':
+                    self.isTag = True
 
         # Create a list of connected notes.
 

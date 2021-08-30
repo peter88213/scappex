@@ -123,12 +123,13 @@ class ScapFile(Novel):
                     self.items[note.uid] = item
                     self.srtItems.append(note.uid)
 
-        # Assign characters/locations/items to the scenes.
+        # Assign characters/locations/items/tags to the scenes.
 
         for scId in self.scenes:
             self.scenes[scId].characters = []
             self.scenes[scId].locations = []
             self.scenes[scId].items = []
+            self.scenes[scId].tags = []
 
             for uid in scapNotes[scId].connections:
 
@@ -145,5 +146,38 @@ class ScapFile(Novel):
 
                 elif uid in self.items:
                     self.scenes[scId].items.append(uid)
+
+                elif scapNotes[uid].isTag:
+                    self.scenes[scId].tags.append(scapNotes[uid].text)
+
+        # Assign tags to the characters.
+
+        for crId in self.characters:
+            self.characters[crId].tags = []
+
+            for uid in scapNotes[crId].connections:
+
+                if scapNotes[uid].isTag:
+                    self.characters[crId].tags.append(scapNotes[uid].text)
+
+        # Assign tags to the locations.
+
+        for lcId in self.locations:
+            self.locations[lcId].tags = []
+
+            for uid in scapNotes[lcId].connections:
+
+                if scapNotes[uid].isTag:
+                    self.locations[lcId].tags.append(scapNotes[uid].text)
+
+        # Assign tags to the items.
+
+        for itId in self.items:
+            self.items[itId].tags = []
+
+            for uid in scapNotes[itId].connections:
+
+                if scapNotes[uid].isTag:
+                    self.items[itId].tags.append(scapNotes[uid].text)
 
         return 'SUCCESS'
