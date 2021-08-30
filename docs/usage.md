@@ -33,7 +33,8 @@ The path of the Scapple outline file.
 
 The column labels refer to the example timeline "Murder on the Orient Express". 
 
-- Notes with a shadow are converted to regular scenes. 
+- Notes with a shadow are converted to scenes. 
+- Notes with a shadow and "cloud" border are converted to "Notes" scenes. 
 - Notes with red text are converted to major characters.
 - Notes with purple text are converted to minor characters.
 - Notes with blue text are converted to locations. 

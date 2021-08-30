@@ -3,10 +3,10 @@
    <Notes/>
    <BackgroundShapes/>
    <NoteStyles>
-      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Scene" ID="915AC8C0-A028-405C-B518-5A5F4631BF53" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Scene" ID="915AC8C0-A028-405C-B518-5A5F4631BF53" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
-         <Size>196.7,-3.6</Size>
+         <Size>675.8,-12.4</Size>
          <Sticky>Yes</Sticky>
          <Shadow>Yes</Shadow>
          <FontSize>12.0</FontSize>
@@ -14,36 +14,55 @@
       <Style AffectFontStyle="No" AffectAlignment="No" Name="Item" ID="27DAD4E9-6419-4704-8465-D368EFCD76C1" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
+         <BorderColor>0.058824 0.458824 0.011765</BorderColor>
          <FillColor>1.0 1.0 1.0</FillColor>
          <TextColor>0.058824 0.458824 0.011765</TextColor>
-         <Size>106.4,-2.2</Size>
+         <Size>365.6,-7.6</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
       <Style AffectFontStyle="No" AffectAlignment="No" Name="Location" ID="C5449001-4357-4EAA-B6DF-3D1DABCD2C2A" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
+         <BorderColor>0.0 0.011765 1.0</BorderColor>
          <FillColor>1.0 1.0 1.0</FillColor>
          <TextColor>0.0 0.011765 1.0</TextColor>
-         <Size>157.8,-2.2</Size>
+         <Size>256.0,-1.3</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
       <Style AffectFontStyle="No" AffectAlignment="No" Name="MajorCharacter" ID="F688F8DB-0230-4B22-8A41-2C4CE7CB4AE5" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
+         <BorderColor>0.984314 0.015686 0.027451</BorderColor>
          <FillColor>1.0 1.0 1.0</FillColor>
          <TextColor>0.984314 0.015686 0.027451</TextColor>
-         <Size>262.3,-2.2</Size>
+         <Size>901.1,-7.6</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
       <Style AffectFontStyle="No" AffectAlignment="No" Name="MinorCharacter" ID="45F5155C-524B-44AC-B0E3-AE26A1FE95B4" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
+         <BorderColor>0.498039 0.015686 0.498039</BorderColor>
          <FillColor>1.0 1.0 1.0</FillColor>
          <TextColor>0.498039 0.015686 0.498039</TextColor>
-         <Size>263.7,-2.2</Size>
+         <Size>906.0,-7.6</Size>
+         <Sticky>Yes</Sticky>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="NotesScene" ID="3FA7621A-7EDE-4F2C-96BF-8BC6A27D027E" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderStyle>Cloud</BorderStyle>
+         <Size>327.7,-1.7</Size>
+         <Sticky>Yes</Sticky>
+         <Shadow>Yes</Shadow>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Tag" ID="86A8B969-3AFF-4533-99E6-4A0D0AE2D4E8" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderStyle>Square</BorderStyle>
+         <Size>304.8,-1.7</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>

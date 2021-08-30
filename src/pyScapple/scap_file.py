@@ -80,6 +80,7 @@ class ScapFile(Novel):
                 if self.exportScenes:
                     scene = Scene()
                     scene.title = note.text
+                    scene.isNotesScene = note.isNotesScene
                     scene.status = 1
                     # Status = Outline
 

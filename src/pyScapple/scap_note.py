@@ -26,10 +26,20 @@ class ScapNote():
 
         if 'Shadow' in xmlNote.attrib:
             self.isScene = True
+            appearance = xmlNote.find('Appearance')
+
+            # Shadowed notes with "Cloud" border represent "notes" scenes.
+
+            self.isNotesScene = False
+            border = appearance.find('Border')
+
+            if border is not None:
+
+                if border.attrib['Style'] == 'Cloud':
+                    self.isNotesScene = True
 
         else:
             self.isScene = False
-
             appearance = xmlNote.find('Appearance')
             color = appearance.find('TextColor')
 
