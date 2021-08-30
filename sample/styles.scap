@@ -6,7 +6,7 @@
       <Style AffectFontStyle="No" AffectAlignment="No" Name="Scene" ID="915AC8C0-A028-405C-B518-5A5F4631BF53" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
-         <Size>675.8,-12.4</Size>
+         <Size>865.0,-15.9</Size>
          <Sticky>Yes</Sticky>
          <Shadow>Yes</Shadow>
          <FontSize>12.0</FontSize>
@@ -15,9 +15,9 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.058824 0.458824 0.011765</BorderColor>
-         <FillColor>1.0 1.0 1.0</FillColor>
+         <FillColor>0.839216 0.917647 0.792157</FillColor>
          <TextColor>0.058824 0.458824 0.011765</TextColor>
-         <Size>365.6,-7.6</Size>
+         <Size>104.8,-1.0</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
@@ -25,9 +25,9 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.0 0.011765 1.0</BorderColor>
-         <FillColor>1.0 1.0 1.0</FillColor>
+         <FillColor>0.788235 0.858824 0.988235</FillColor>
          <TextColor>0.0 0.011765 1.0</TextColor>
-         <Size>256.0,-1.3</Size>
+         <Size>104.8,-1.0</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
@@ -35,9 +35,9 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.984314 0.015686 0.027451</BorderColor>
-         <FillColor>1.0 1.0 1.0</FillColor>
+         <FillColor>0.996078 0.811765 0.819608</FillColor>
          <TextColor>0.984314 0.015686 0.027451</TextColor>
-         <Size>901.1,-7.6</Size>
+         <Size>104.8,-1.0</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
@@ -45,24 +45,27 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.498039 0.015686 0.498039</BorderColor>
-         <FillColor>1.0 1.0 1.0</FillColor>
+         <FillColor>0.925490 0.721569 1.0</FillColor>
          <TextColor>0.498039 0.015686 0.498039</TextColor>
-         <Size>906.0,-7.6</Size>
+         <Size>104.8,-1.0</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
       <Style AffectFontStyle="No" AffectAlignment="No" Name="NotesScene" ID="3FA7621A-7EDE-4F2C-96BF-8BC6A27D027E" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Cloud</BorderStyle>
-         <Size>327.7,-1.7</Size>
+         <Size>419.5,-2.2</Size>
          <Sticky>Yes</Sticky>
          <Shadow>Yes</Shadow>
          <FontSize>12.0</FontSize>
       </Style>
-      <Style AffectFontStyle="No" AffectAlignment="No" Name="Tag" ID="86A8B969-3AFF-4533-99E6-4A0D0AE2D4E8" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Tag" ID="86A8B969-3AFF-4533-99E6-4A0D0AE2D4E8" AffectTextColor="Yes" AffectNoteBody="Yes" AffectSticky="Yes" AffectSize="No" AffectFade="No">
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Square</BorderStyle>
-         <Size>304.8,-1.7</Size>
+         <BorderColor>0.333333 0.298039 0.043137</BorderColor>
+         <FillColor>1.0 0.988235 0.827451</FillColor>
+         <TextColor>0.333333 0.298039 0.043137</TextColor>
+         <Size>31.3,-1.0</Size>
          <Sticky>Yes</Sticky>
          <FontSize>12.0</FontSize>
       </Style>
