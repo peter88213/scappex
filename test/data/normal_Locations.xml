@@ -1,15 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-	<LOCATIONS>
-	<LOCATION>
-		<ID>6</ID>
-		<Title><![CDATA[Location 1]]></Title>
-		<SortOrder>1</SortOrder>
-	</LOCATION>
-
-	<LOCATION>
-		<ID>8</ID>
-		<Title><![CDATA[Location 2]]></Title>
-		<SortOrder>2</SortOrder>
-	</LOCATION>
-
-	</LOCATIONS>
+<?xml version="1.0" encoding="utf-8"?>
+<LOCATIONS>
+    <LOCATION>
+      <ID>6</ID>
+      <Title><![CDATA[Location 1]]></Title>
+      <Tags />
+      <SortOrder>1</SortOrder>
+    </LOCATION>
+    <LOCATION>
+      <ID>8</ID>
+      <Title><![CDATA[Location 2]]></Title>
+      <Tags><![CDATA[Tag 2]]></Tags>
+      <SortOrder>2</SortOrder>
+    </LOCATION>
+  </LOCATIONS>
+  

@@ -23,13 +23,17 @@ TEST_EXEC_PATH = TEST_PATH + '/yw7/'
 # To be placed in TEST_DATA_PATH:
 NORMAL_YW7 = TEST_DATA_PATH + 'normal.yw7'
 NORMAL_SCAP = TEST_DATA_PATH + 'normal.scap'
+NORMAL_CHARACTERS_XML = TEST_DATA_PATH + 'normal_Characters.xml'
+NORMAL_LOCATIONS_XML = TEST_DATA_PATH + 'normal_Locations.xml'
+NORMAL_ITEMS_XML = TEST_DATA_PATH + 'normal_Items.xml'
 INI_FILE = 'scappex.ini'
 
 # Test data
 TEST_YW7 = TEST_EXEC_PATH + 'yw7 Sample Project.yw7'
 TEST_SCAP = TEST_EXEC_PATH + 'yw7 Sample Project.scap'
-BACKUP_SCAP = TEST_SCAP + '.bak'
-BACKUP_YW7 = TEST_YW7 + '.bak'
+TEST_CHARACTERS_XML = TEST_EXEC_PATH + 'yw7 Sample Project_Characters.xml'
+TEST_LOCATIONS_XML = TEST_EXEC_PATH + 'yw7 Sample Project_Locations.xml'
+TEST_ITEMS_XML = TEST_EXEC_PATH + 'yw7 Sample Project_Items.xml'
 
 
 def read_file(inputFile):
@@ -61,12 +65,17 @@ def remove_all_testfiles():
         pass
 
     try:
-        os.remove(BACKUP_SCAP)
+        os.remove(TEST_CHARACTERS_XML)
     except:
         pass
 
     try:
-        os.remove(BACKUP_YW7)
+        os.remove(TEST_LOCATIONS_XML)
+    except:
+        pass
+
+    try:
+        os.remove(TEST_ITEMS_XML)
     except:
         pass
 
@@ -89,6 +98,15 @@ class NormalOperation(unittest.TestCase):
         os.chdir(TEST_EXEC_PATH)
         scappex_.run(TEST_SCAP, silentMode=True)
         self.assertEqual(read_file(TEST_YW7), read_file(NORMAL_YW7))
+
+    def test_scap_to_data(self):
+        copyfile(NORMAL_SCAP, TEST_SCAP)
+        copyfile(NORMAL_YW7, TEST_YW7)
+        os.chdir(TEST_EXEC_PATH)
+        scappex_.run(TEST_SCAP, silentMode=True)
+        self.assertEqual(read_file(TEST_CHARACTERS_XML), read_file(NORMAL_CHARACTERS_XML))
+        self.assertEqual(read_file(TEST_LOCATIONS_XML), read_file(NORMAL_LOCATIONS_XML))
+        self.assertEqual(read_file(TEST_ITEMS_XML), read_file(NORMAL_ITEMS_XML))
 
     def tearDown(self):
         remove_all_testfiles()

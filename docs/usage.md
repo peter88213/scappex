@@ -29,9 +29,15 @@ The path of the Scapple outline file.
 
 `--silent`  suppress error messages and the request to confirm overwriting
 
-## Conversion rules
+## Mode of operation
 
-The column labels refer to the example timeline "Murder on the Orient Express". 
+*Scappex* generates a new yWriter project file with the same file name as the Scapple source file, 
+but with the extension `.yw`. It is placed in the same directory as the source file. 
+
+However, **if the yWriter project already exists, it would not be overwritten**. Character/Location/Item 
+XML files are generated instead. They can be imported into any yWriter project.
+
+## Conversion rules
 
 - Notes with a shadow are converted to scenes. 
 - Notes with a shadow and "cloud" border are converted to "Notes" scenes. 

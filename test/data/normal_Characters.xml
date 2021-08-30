@@ -1,29 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-	<CHARACTERS>
-	<CHARACTER>
-		<ID>2</ID>
-		<Title><![CDATA[Major Character 1]]></Title>
-		<SortOrder>1</SortOrder>
-		<Major>-1</Major>
-	</CHARACTER>
-
-	<CHARACTER>
-		<ID>3</ID>
-		<Title><![CDATA[Minor Character 1]]></Title>
-		<SortOrder>2</SortOrder>
-	</CHARACTER>
-
-	<CHARACTER>
-		<ID>4</ID>
-		<Title><![CDATA[Minor Character 2]]></Title>
-		<SortOrder>3</SortOrder>
-	</CHARACTER>
-
-	<CHARACTER>
-		<ID>5</ID>
-		<Title><![CDATA[Major Character 2]]></Title>
-		<SortOrder>4</SortOrder>
-		<Major>-1</Major>
-	</CHARACTER>
-
-	</CHARACTERS>
+<?xml version="1.0" encoding="utf-8"?>
+<CHARACTERS>
+    <CHARACTER>
+      <ID>2</ID>
+      <Title><![CDATA[Major Character 1]]></Title>
+      <SortOrder>1</SortOrder>
+      <Tags />
+      <FullName><![CDATA[Major Character 1]]></FullName>
+      <Major>-1</Major>
+    </CHARACTER>
+    <CHARACTER>
+      <ID>3</ID>
+      <Title><![CDATA[Minor Character 1]]></Title>
+      <SortOrder>2</SortOrder>
+      <Tags />
+      <FullName><![CDATA[Minor Character 1]]></FullName>
+    </CHARACTER>
+    <CHARACTER>
+      <ID>4</ID>
+      <Title><![CDATA[Minor Character 2]]></Title>
+      <SortOrder>3</SortOrder>
+      <Tags><![CDATA[Tag 2]]></Tags>
+      <FullName><![CDATA[Minor Character 2]]></FullName>
+    </CHARACTER>
+    <CHARACTER>
+      <ID>5</ID>
+      <Title><![CDATA[Major Character 2]]></Title>
+      <SortOrder>4</SortOrder>
+      <Tags><![CDATA[Tag 3]]></Tags>
+      <FullName><![CDATA[Major Character 2]]></FullName>
+      <Major>-1</Major>
+    </CHARACTER>
+  </CHARACTERS>
+  

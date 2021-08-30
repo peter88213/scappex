@@ -10,6 +10,8 @@
 - Notes with a square border are converted to tags.
 - Notes with colored text are converted to characters, locations, or items.
 - Connections between scenes and characters/locations/items are considered.
+- If a yWriter project already exists, Character/Location/Item XML files are generated instead.
+- The *scappex* release includes a sample Scapple file with note styles to import.
 
  
 ## Requirements
@@ -22,9 +24,9 @@
 
 ## Download and install
 
-[Download the latest release (version 0.6.0)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.6.0.zip)
+[Download the latest release (version 0.8.0)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.8.0.zip)
 
-- Unzip the downloaded zipfile "scappex_v0.6.0.zip" into a new folder.
+- Unzip the downloaded zipfile "scappex_v0.8.0.zip" into a new folder.
 - Move into this new folder and launch **install.bat**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for usage instructions.

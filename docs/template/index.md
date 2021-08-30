@@ -10,6 +10,8 @@
 - Notes with a square border are converted to tags.
 - Notes with colored text are converted to characters, locations, or items.
 - Connections between scenes and characters/locations/items are considered.
+- If a yWriter project already exists, Character/Location/Item XML files are generated instead.
+- The *scappex* release includes a sample Scapple file with note styles to import.
 
  
 ## Requirements

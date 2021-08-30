@@ -8,6 +8,12 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.8.0 Beta test release
+
+Export Character/Location/Item XML files.
+
+Based on PyWriter v3.20.0
+
 ### v0.6.0 Beta test release
 
 Export tags to yWriter.
