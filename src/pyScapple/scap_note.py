@@ -14,11 +14,17 @@ class ScapNote():
         """Parse a single Scapple note.
         Extend the superclass method.
         """
-        self.isTag = False
-        self.isNote = False
         self.isScene = False
         self.isNotesScene = False
+        self.isTag = False
+        self.isNote = False
+        self.color = ''
+        self.rgb = [0.0, 0.0, 0.0]
+
         self.text = xmlNote.find('String').text
+
+        positionStr = xmlNote.attrib['Position'].split(',')
+        self.position = [float(positionStr[0]), float(positionStr[1])]
 
         # Set UID.
         # Because Scapple UIDs begin with zero, they are all incremented by 1 for yWriter use.
@@ -26,43 +32,33 @@ class ScapNote():
         scappId = xmlNote.attrib['ID']
         self.uid = str(int(scappId) + 1)
 
-        # Shadowed notes represent scenes.
+        appearance = xmlNote.find('Appearance')
+        color = appearance.find('TextColor')
+
+        if color is not None:
+            self.color = color.text
+            rgbStr = color.text.split(' ')
+            self.rgb = [float(rgbStr[0]), float(rgbStr[1]), float(rgbStr[2])]
+
+        border = appearance.find('Border')
+
+        if border is not None:
+            borderStyle = border.attrib['Style']
+
+        else:
+            borderStyle = ''
 
         if 'Shadow' in xmlNote.attrib:
             self.isScene = True
-            appearance = xmlNote.find('Appearance')
 
-            # Shadowed notes with "Cloud" border represent "notes" scenes.
+            if borderStyle == 'Cloud':
+                self.isNotesScene = True
 
-            border = appearance.find('Border')
+        elif borderStyle == 'Square':
+            self.isTag = True
 
-            if border is not None:
-
-                if border.attrib['Style'] == 'Cloud':
-                    self.isNotesScene = True
-
-        else:
-            appearance = xmlNote.find('Appearance')
-            color = appearance.find('TextColor')
-
-            if color is not None:
-                self.color = color.text
-
-            else:
-                self.color = ''
-
-            # Notes with a square border represent tags.
-
-            appearance = xmlNote.find('Appearance')
-            border = appearance.find('Border')
-
-            if border is not None:
-
-                if border.attrib['Style'] == 'Square':
-                    self.isTag = True
-
-                elif border.attrib['Style'] == 'Cloud':
-                    self.isNote = True
+        elif borderStyle == 'Cloud':
+            self.isNote = True
 
         # Create a list of connected notes.
 
