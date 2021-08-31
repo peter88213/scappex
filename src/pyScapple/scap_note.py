@@ -10,6 +10,10 @@ class ScapNote():
     """Scapple note representation.
     """
 
+    Y_FACTOR = 100000
+    # Sortable position = y * Y_FACTOR + x
+    # This works if x and y are not greater than 9999.9
+
     def __init__(self, xmlNote):
         """Parse a single Scapple note.
         Extend the superclass method.
@@ -24,7 +28,7 @@ class ScapNote():
         self.text = xmlNote.find('String').text
 
         positionStr = xmlNote.attrib['Position'].split(',')
-        self.position = [float(positionStr[0]), float(positionStr[1])]
+        self.position = float(positionStr[1]) * self.Y_FACTOR + float(positionStr[0])
 
         # Set UID.
         # Because Scapple UIDs begin with zero, they are all incremented by 1 for yWriter use.

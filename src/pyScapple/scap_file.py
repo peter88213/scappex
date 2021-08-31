@@ -68,10 +68,12 @@ class ScapFile(Novel):
         # Parse Scapple notes.
 
         scapNotes = {}
+        uidByPos = {}
 
         for xmlNote in root.iter('Note'):
             note = ScapNote(xmlNote)
             scapNotes[note.uid] = note
+            uidByPos[note.position] = note.uid
 
             # Create Novel elements.
 
@@ -85,7 +87,6 @@ class ScapFile(Novel):
                     # Status = Outline
 
                     self.scenes[note.uid] = scene
-                    self.chapters[chId].srtScenes.append(note.uid)
 
             elif note.color == self.majorCharaColor:
 
@@ -122,6 +123,13 @@ class ScapFile(Novel):
                     item.title = note.text
                     self.items[note.uid] = item
                     self.srtItems.append(note.uid)
+
+        # Sort notes by position.
+
+        srtNotes = sorted(uidByPos.items())
+
+        for srtNote in srtNotes:
+            self.chapters[chId].srtScenes.append(srtNote[1])
 
         # Assign characters/locations/items/tags/notes to the scenes.
 

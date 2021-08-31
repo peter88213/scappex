@@ -8,6 +8,12 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.12.0 Beta test release
+
+- Scenes are ordered by their position in the Scapple diagram (from top left to bottom right).
+
+Based on PyWriter v3.22.0
+
 ### v0.10.0 Beta test release
 
 Export notes to yWriter.

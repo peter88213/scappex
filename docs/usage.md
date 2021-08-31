@@ -41,6 +41,7 @@ XML files are generated instead. They can be imported into any yWriter project.
 
 - Notes with a shadow are converted to scenes. 
 - Notes with a shadow and "cloud" border are converted to "Notes" scenes. 
+- Scenes are ordered by their position in the Scapple diagram (from top left to bottom right).
 - Notes with a "cloud" border without shadow are converted to scene and character notes.
 - Notes with a square border are converted to tags.
 - Notes with red text are converted to major characters.

@@ -139,9 +139,9 @@
       <SortOrder>1</SortOrder>
       <Title><![CDATA[Chapter 1]]></Title>
       <Scenes>
+        <ScID>11</ScID>
         <ScID>1</ScID>
         <ScID>7</ScID>
-        <ScID>11</ScID>
       </Scenes>
     </CHAPTER>
   </CHAPTERS>
