@@ -20,10 +20,10 @@ from pyScapple.scap_converter import ScapConverter
 SUFFIX = ''
 APPNAME = 'scappex'
 
-GREEN = '0.058824 0.458824 0.011765'
-BLUE = '0.0 0.011765 1.0'
-RED = '0.984314 0.015686 0.027451'
-PURPLE = '0.498039 0.015686 0.498039'
+GREEN = '0.0 0.5 0.0'
+BLUE = '0.0 0.0 1.0'
+RED = '1.0 0.0 0.0'
+PURPLE = '0.5 0.0 0.5'
 
 SETTINGS = dict(
     location_color=BLUE,

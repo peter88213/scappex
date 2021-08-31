@@ -126,16 +126,16 @@ This is the configuration explained:
 
 ```
 [SETTINGS]
-location_color = 0.0 0.011765 1.0
+location_color = 0.0 0.0 1.0
 # Blue
 
-item_color = 0.058824 0.458824 0.011765
+item_color = 0.0 0.5 0.0
 # Green
 
-major_chara_color = 0.984314 0.015686 0.027451
+major_chara_color = 1.0 0.0 0.0
 # Red
 
-minor_chara_color = 0.498039 0.015686 0.498039
+minor_chara_color = 0.5 0.0 0.5
 # Purple
 
 [OPTIONS]

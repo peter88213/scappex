@@ -50,6 +50,31 @@ class ScapFile(Novel):
         Return a message beginning with SUCCESS or ERROR.
         Override the superclass method.
         """
+        def str_to_rgb(colorStr):
+            """Return a RGB tuple for a given string.
+            """
+            try:
+                rgbStr = colorStr.split(' ')
+                return float(rgbStr[0]), float(rgbStr[1]), float(rgbStr[2])
+
+            except(ValueError):
+                return (0.0, 0.0, 0.0)
+
+        def color_matches(color1, color2):
+            """Return True if color1 is close to color 2, otherwise return False.
+            """
+            TOLERANCE = 0.1
+
+            c1 = str_to_rgb(color1)
+            c2 = str_to_rgb(color2)
+
+            for i in range(3):
+
+                if abs(c1[i] - c2[i]) > TOLERANCE:
+                    return False
+
+            return True
+
         try:
             self.tree = ET.parse(self.filePath)
 
@@ -88,7 +113,7 @@ class ScapFile(Novel):
 
                     self.scenes[note.uid] = scene
 
-            elif note.color == self.majorCharaColor:
+            elif color_matches(note.color, self.majorCharaColor):
 
                 if self.exportCharacters:
                     character = Character()
@@ -98,7 +123,7 @@ class ScapFile(Novel):
                     self.characters[note.uid] = character
                     self.srtCharacters.append(note.uid)
 
-            elif note.color == self.minorCharaColor:
+            elif color_matches(note.color, self.minorCharaColor):
 
                 if self.exportCharacters:
                     character = Character()
@@ -108,7 +133,7 @@ class ScapFile(Novel):
                     self.characters[note.uid] = character
                     self.srtCharacters.append(note.uid)
 
-            elif note.color == self.locationColor:
+            elif color_matches(note.color, self.locationColor):
 
                 if self.exportLocations:
                     location = WorldElement()
@@ -116,7 +141,7 @@ class ScapFile(Novel):
                     self.locations[note.uid] = location
                     self.srtLocations.append(note.uid)
 
-            elif note.color == self.itemColor:
+            elif color_matches(note.color, self.itemColor):
 
                 if self.exportItems:
                     item = WorldElement()

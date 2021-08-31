@@ -23,7 +23,6 @@ class ScapNote():
         self.isTag = False
         self.isNote = False
         self.color = ''
-        self.rgb = [0.0, 0.0, 0.0]
 
         self.text = xmlNote.find('String').text
 
@@ -41,8 +40,6 @@ class ScapNote():
 
         if color is not None:
             self.color = color.text
-            rgbStr = color.text.split(' ')
-            self.rgb = [float(rgbStr[0]), float(rgbStr[1]), float(rgbStr[2])]
 
         border = appearance.find('Border')
 
