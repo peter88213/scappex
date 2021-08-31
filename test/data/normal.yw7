@@ -36,6 +36,7 @@
       <ID>2</ID>
       <Title><![CDATA[Major Character 1]]></Title>
       <SortOrder>1</SortOrder>
+      <Notes />
       <Tags />
       <FullName><![CDATA[Major Character 1]]></FullName>
       <Major>-1</Major>
@@ -44,6 +45,7 @@
       <ID>3</ID>
       <Title><![CDATA[Minor Character 1]]></Title>
       <SortOrder>2</SortOrder>
+      <Notes />
       <Tags />
       <FullName><![CDATA[Minor Character 1]]></FullName>
     </CHARACTER>
@@ -51,6 +53,7 @@
       <ID>4</ID>
       <Title><![CDATA[Minor Character 2]]></Title>
       <SortOrder>3</SortOrder>
+      <Notes />
       <Tags><![CDATA[Tag 2]]></Tags>
       <FullName><![CDATA[Minor Character 2]]></FullName>
     </CHARACTER>
@@ -58,6 +61,7 @@
       <ID>5</ID>
       <Title><![CDATA[Major Character 2]]></Title>
       <SortOrder>4</SortOrder>
+      <Notes><![CDATA[Note 2]]></Notes>
       <Tags><![CDATA[Tag 3]]></Tags>
       <FullName><![CDATA[Major Character 2]]></FullName>
       <Major>-1</Major>
@@ -72,6 +76,7 @@
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
       <Status>1</Status>
+      <Notes><![CDATA[Note 1]]></Notes>
       <Tags><![CDATA[Tag 3;Tag 4]]></Tags>
       <Characters>
         <CharID>2</CharID>
@@ -94,6 +99,7 @@
       <WordCount>0</WordCount>
       <LetterCount>0</LetterCount>
       <Status>1</Status>
+      <Notes />
       <Tags><![CDATA[Tag 1]]></Tags>
       <Characters>
         <CharID>5</CharID>
@@ -118,6 +124,7 @@
         <Field_SceneType>1</Field_SceneType>
       </Fields>
       <Status>1</Status>
+      <Notes />
       <Tags />
       <Characters />
       <Locations>

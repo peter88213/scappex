@@ -8,6 +8,14 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.10.0 Beta test release
+
+Export notes to yWriter.
+
+- Scene notes and character notes are marked with a "cloud" border.
+
+Based on PyWriter v3.22.0
+
 ### v0.8.0 Beta test release
 
 Export Character/Location/Item XML files.

@@ -15,6 +15,7 @@ class ScapNote():
         Extend the superclass method.
         """
         self.isTag = False
+        self.isNote = False
         self.isScene = False
         self.isNotesScene = False
         self.text = xmlNote.find('String').text
@@ -59,6 +60,9 @@ class ScapNote():
 
                 if border.attrib['Style'] == 'Square':
                     self.isTag = True
+
+                elif border.attrib['Style'] == 'Cloud':
+                    self.isNote = True
 
         # Create a list of connected notes.
 

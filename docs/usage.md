@@ -41,6 +41,7 @@ XML files are generated instead. They can be imported into any yWriter project.
 
 - Notes with a shadow are converted to scenes. 
 - Notes with a shadow and "cloud" border are converted to "Notes" scenes. 
+- Notes with a "cloud" border without shadow are converted to scene and character notes.
 - Notes with a square border are converted to tags.
 - Notes with red text are converted to major characters.
 - Notes with purple text are converted to minor characters.
@@ -69,6 +70,10 @@ Either apply the "Scene" style, if any, via context menu, or tick "Shadow" in th
 ![Screenshot: Set note shadow](Screenshots/mark_scene.png)
 
 To make the scene a "Notes" scene, either apply the "NotesScene" style, or make its border style "Cloud" in the Inspector.
+
+### Mark notes
+
+Either apply the "Note" style, if any, via context menu, or make the note's border style "Cloud" in the Inspector.
 
 ### Mark tags
 

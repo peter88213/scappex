@@ -7,6 +7,7 @@
 
 - Notes with a shadow are converted to scenes in one single chapter.
 - Notes with a "cloud" border and shadow are converted to "Notes" scenes.
+- Notes with a "cloud" border without shadow are converted to scene and character notes.
 - Notes with a square border are converted to tags.
 - Notes with colored text are converted to characters, locations, or items.
 - Connections between scenes and characters/locations/items are considered.
