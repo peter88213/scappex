@@ -14,15 +14,76 @@ class ScapNote():
     # Sortable position = y * Y_FACTOR + x
     # This works if x and y are not greater than 9999.9
 
-    def __init__(self, xmlNote):
-        """Parse a single Scapple note.
-        Extend the superclass method.
+    locationColor = None
+    itemColor = None
+    majorCharaColor = None
+    minorCharaColor = None
+
+    def __init__(self):
+        """Define instance variables:
+        isScene - True, if the note represents a yWriter scene
+        isTag - True, if the note represents a yWriter tag
+        isNote - True, if the note represents a yWriter note
+        textColor - text color; RGB components in a single string.
+        connections - list of connected notes.
+        pointTo - list of notes pointed to.
         """
+        self.text = None
+        self.isScene = None
+        self.isNotesScene = None
+        self.isTag = None
+        self.isNote = None
+        self.isMajorChara = None
+        self.isMinorChara = None
+        self.isLocation = None
+        self.isItem = None
+        self.textColor = None
+        self.connections = None
+        self.pointTo = None
+
+    def parse_xml(self, xmlNote):
+        """Parse a single Scapple note.
+        Parameter:
+        xmlNote - Scapple <Note> XML subtree
+
+        Write instance variables:
+        isScene, isTag, isNote, textColor, connections, pointTo
+        """
+
+        def str_to_rgb(colorStr):
+            """Return a RGB tuple for a given string.
+            """
+            try:
+                rgbStr = colorStr.split(' ')
+                return float(rgbStr[0]), float(rgbStr[1]), float(rgbStr[2])
+
+            except(ValueError):
+                return (0.0, 0.0, 0.0)
+
+        def color_matches(color1, color2):
+            """Return True if color1 is close to textColor 2, otherwise return False.
+            """
+            TOLERANCE = 0.1
+
+            c1 = str_to_rgb(color1)
+            c2 = str_to_rgb(color2)
+
+            for i in range(3):
+
+                if abs(c1[i] - c2[i]) > TOLERANCE:
+                    return False
+
+            return True
+
         self.isScene = False
         self.isNotesScene = False
         self.isTag = False
         self.isNote = False
-        self.color = ''
+        self.isMajorChara = False
+        self.isMinorChara = False
+        self.isLocation = False
+        self.isItem = False
+        self.textColor = ''
 
         self.text = xmlNote.find('String').text
 
@@ -39,7 +100,7 @@ class ScapNote():
         color = appearance.find('TextColor')
 
         if color is not None:
-            self.color = color.text
+            self.textColor = color.text
 
         border = appearance.find('Border')
 
@@ -61,7 +122,19 @@ class ScapNote():
         elif borderStyle == 'Cloud':
             self.isNote = True
 
-        # Create a list of connected notes.
+        elif color_matches(self.textColor, self.majorCharaColor):
+            self.isMajorChara = True
+
+        elif color_matches(self.textColor, self.minorCharaColor):
+            self.isMinorChara = True
+
+        elif color_matches(self.textColor, self.locationColor):
+            self.isLocation = True
+
+        elif color_matches(self.textColor, self.itemColor):
+            self.isItem = True
+
+        #--- Create a list of connected notes.
 
         self.connections = []
 
@@ -82,7 +155,7 @@ class ScapNote():
                     i = int(connText) + 1
                     self.connections.append(str(i))
 
-        # Create a list of notes pointed to.
+        #--- Create a list of notes pointed to.
 
         self.pointTo = []
 

@@ -14,7 +14,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>1.0 0.0 0.0</TextColor>
-            <Fill>0.996078 0.811765 0.819608</Fill>
+            <Fill>1.0 0.81 0.82</Fill>
             <Border Weight="1" Style="Rounded">1.0 0.0 0.0</Border>
          </Appearance>
          <String>Major Character 1</String>
@@ -25,7 +25,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.5 0.0 0.5</TextColor>
-            <Fill>0.925490 0.721569 1.0</Fill>
+            <Fill>0.93 0.72 1.0</Fill>
             <Border Weight="1" Style="Rounded">0.5 0.0 0.5</Border>
          </Appearance>
          <String>Minor Character 1</String>
@@ -35,7 +35,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.5 0.0 0.5</TextColor>
-            <Fill>0.925490 0.721569 1.0</Fill>
+            <Fill>0.93 0.72 1.0</Fill>
             <Border Weight="1" Style="Rounded">0.5 0.0 0.5</Border>
          </Appearance>
          <String>Minor Character 2</String>
@@ -45,7 +45,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>1.0 0.0 0.0</TextColor>
-            <Fill>0.996078 0.811765 0.819608</Fill>
+            <Fill>1.0 0.81 0.82</Fill>
             <Border Weight="1" Style="Rounded">1.0 0.0 0.0</Border>
          </Appearance>
          <String>Major Character 2</String>
@@ -56,7 +56,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.0 0.0 1.0</TextColor>
-            <Fill>0.788235 0.858824 0.988235</Fill>
+            <Fill>0.79 0.86 1.0</Fill>
             <Border Weight="1" Style="Rounded">0.0 0.0 1.0</Border>
          </Appearance>
          <String>Location 1</String>
@@ -74,7 +74,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.0 0.0 1.0</TextColor>
-            <Fill>0.788235 0.858824 0.988235</Fill>
+            <Fill>0.79 0.86 1.0</Fill>
             <Border Weight="1" Style="Rounded">0.0 0.0 1.0</Border>
          </Appearance>
          <String>Location 2</String>
@@ -84,7 +84,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.0 0.5 0.0</TextColor>
-            <Fill>0.839216 0.917647 0.792157</Fill>
+            <Fill>0.84 0.92 0.8</Fill>
             <Border Weight="1" Style="Rounded">0.0 0.5 0.0</Border>
          </Appearance>
          <String>Item 1</String>
@@ -94,7 +94,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.0 0.5 0.0</TextColor>
-            <Fill>0.839216 0.917647 0.792157</Fill>
+            <Fill>0.84 0.92 0.8</Fill>
             <Border Weight="1" Style="Rounded">0.0 0.5 0.0</Border>
          </Appearance>
          <String>Item 2</String>
@@ -127,7 +127,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.3 0.3 0.0</TextColor>
-            <Fill>1.0 0.988235 0.827451</Fill>
+            <Fill>1.0 1.0 0.83</Fill>
             <Border Weight="1" Style="Square">0.3 0.3 0.0</Border>
          </Appearance>
          <String>Tag 1</String>
@@ -137,7 +137,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.3 0.3 0.0</TextColor>
-            <Fill>1.0 0.988235 0.827451</Fill>
+            <Fill>1.0 1.0 0.83</Fill>
             <Border Weight="1" Style="Square">0.3 0.3 0.0</Border>
          </Appearance>
          <String>Tag 2</String>
@@ -147,7 +147,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.3 0.3 0.0</TextColor>
-            <Fill>1.0 0.988235 0.827451</Fill>
+            <Fill>1.0 1.0 0.83</Fill>
             <Border Weight="1" Style="Square">0.3 0.3 0.0</Border>
          </Appearance>
          <String>Tag 3</String>
@@ -157,7 +157,7 @@
          <Appearance>
             <Alignment>Left</Alignment>
             <TextColor>0.3 0.3 0.0</TextColor>
-            <Fill>1.0 0.988235 0.827451</Fill>
+            <Fill>1.0 1.0 0.83</Fill>
             <Border Weight="1" Style="Square">0.3 0.3 0.0</Border>
          </Appearance>
          <String>Tag 4</String>
@@ -195,7 +195,7 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.0 0.5 0.0</BorderColor>
-         <FillColor>0.839216 0.917647 0.792157</FillColor>
+         <FillColor>0.84 0.92 0.8</FillColor>
          <TextColor>0.0 0.5 0.0</TextColor>
          <Size>171.6,-1.7</Size>
          <Sticky>Yes</Sticky>
@@ -205,7 +205,7 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.0 0.0 1.0</BorderColor>
-         <FillColor>0.788235 0.858824 0.988235</FillColor>
+         <FillColor>0.79 0.86 1.0</FillColor>
          <TextColor>0.0 0.0 1.0</TextColor>
          <Size>171.6,-1.7</Size>
          <Sticky>Yes</Sticky>
@@ -215,7 +215,7 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>1.0 0.0 0.0</BorderColor>
-         <FillColor>0.996078 0.811765 0.819608</FillColor>
+         <FillColor>1.0 0.81 0.82</FillColor>
          <TextColor>1.0 0.0 0.0</TextColor>
          <Size>171.6,-1.7</Size>
          <Sticky>Yes</Sticky>
@@ -225,7 +225,7 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Rounded</BorderStyle>
          <BorderColor>0.5 0.0 0.5</BorderColor>
-         <FillColor>0.925490 0.721569 1.0</FillColor>
+         <FillColor>0.93 0.72 1.0</FillColor>
          <TextColor>0.5 0.0 0.5</TextColor>
          <Size>171.6,-1.7</Size>
          <Sticky>Yes</Sticky>
@@ -250,7 +250,7 @@
          <BorderThickness>1</BorderThickness>
          <BorderStyle>Square</BorderStyle>
          <BorderColor>0.3 0.3 0.0</BorderColor>
-         <FillColor>1.0 0.988235 0.827451</FillColor>
+         <FillColor>1.0 1.0 0.83</FillColor>
          <TextColor>0.3 0.3 0.0</TextColor>
          <Size>51.3,-1.7</Size>
          <Sticky>Yes</Sticky>
