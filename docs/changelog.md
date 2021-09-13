@@ -8,6 +8,12 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.12.2 Beta test release
+
+- Merge v0.13.0 without the yw to Scapple conversion part.
+
+Based on PyWriter v3.22.0
+
 ### v0.12.1 Beta test release
 
 - Compare text colors by their RGB components. This works even if the colors don't match exactly.
