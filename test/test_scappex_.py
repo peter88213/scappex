@@ -2,7 +2,7 @@
 
 Test suite for scappex.pyw.
 
-For further information see https://github.com/peter88213/yw-timeline
+For further information see https://github.com/peter88213/scappex
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 from shutil import copyfile
