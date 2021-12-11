@@ -18,6 +18,8 @@
 	</target>
 
 	<target name="test" description="inline all library modules">
+		<copy file="${test}/test_scappex_.py" tofile="${test}/test_scappex.py" />
+		<replace encoding="utf-8" file="${test}/test_scappex.py" token="scappex_" value="scappex" />
 		<exec executable="python" failonerror="true">
 		    <arg value="${test}/test_scappex.py"/>
 		</exec>
@@ -53,6 +55,7 @@
 	<target name="clean" description="clean up">
 		
 		<delete file="${test}/scappex.pyw" />
+		<delete file="${test}/test_scappex.py" />
 		
 	</target>
 
