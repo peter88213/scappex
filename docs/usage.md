@@ -106,7 +106,7 @@ You can override the default settings by providing a configuration file. Be alwa
 ### Global configuration
 
 An optional global configuration file can be placed in the configuration directory in your user profile. It is applied to any project. Its entries override scappex's built-in constants. This is the path:
-`c:\Users\<user name>\AppData\Roaming\PyWriter\scappex\config\scappex.ini`
+`c:\Users\<user name>\.pywriter\scappex\config\scappex.ini`
   
 The **install.bat** installation script installs a sample configuration file containing scappex's default values. You can modify or delete it. 
 
@@ -148,7 +148,7 @@ export_items = Yes
 
 ## Installation path
 
-The **install.bat** installation script installs *scappex.pyw* in the user profile. This is the installation path: 
+The **install.bat** installation script installs *scappex.pyw* in the user profile. This is the installation path on Windows: 
 
-`c:\Users\<user name>\AppData\Roaming\PyWriter\scappex`
+`c:\Users\<user name>\.pywriter\scappex`
     
