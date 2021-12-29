@@ -25,8 +25,7 @@
 		</exec>
 	</target>
 
-	<target name="dist" description="generate the distribution">
-		
+	<target name="dist" description="generate the distribution">		
 		<delete dir="${build}" />
 		<mkdir dir="${build}" />
 		<delete dir="${dist}" />
@@ -37,26 +36,26 @@
 			<fileset dir="../sample" />
 		</copy>
 		
-		<copy file="./install.bat" todir="${build}/${release-name}" />
-		
 		<copy file="${test}/scappex.pyw" tofile="${build}/${release-name}/scappex.pyw" />
 		<replace encoding="utf-8" file="${build}/${release-name}/scappex.pyw" token="@release" value="${release}" />
 
+		<copy file="${src}/setup.pyw" todir="${build}/${release-name}" />		
+		<replace encoding="utf-8" file="${build}/${release-name}/setup.pyw" token="@release" value="${release}" />
+		
 		<copy file="../LICENSE" todir="${build}/${release-name}" />
 		<copy file="${docs}/usage.md" tofile="${build}/${release-name}/README.md" />
 
+		<fixcrlf encoding="utf-8" eol="lf" srcdir="${build}/${release-name}" includes="**/*.*" />
+		
 		<zip destfile="${dist}/${release-name}.zip" basedir="${build}/${release-name}" />
 
 		<copy file="${docs}/template/index.md" overwrite="True" todir="${docs}" />
 		<replace encoding="utf-8" file="${docs}/index.md" token="0.99.0" value="${release}" />
-
 	</target>
 
-	<target name="clean" description="clean up">
-		
+	<target name="clean" description="clean up">		
 		<delete file="${test}/scappex.pyw" />
-		<delete file="${test}/test_scappex.py" />
-		
+		<delete file="${test}/test_scappex.py" />		
 	</target>
 
 </project>

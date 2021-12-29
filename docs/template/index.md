@@ -17,7 +17,6 @@
  
 ## Requirements
 
-- Windows.
 - [Python 3](https://www.python.org). Python 3.4 or more recent will work. However, Python 3.7 or above is highly recommended.
 - [yWriter 7](http://spacejock.com/yWriter7.html).
 - [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
@@ -28,9 +27,15 @@
 [Download the latest release (version 0.99.0)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.99.0.zip)
 
 - Unzip the downloaded zipfile "scappex_v0.99.0.zip" into a new folder.
-- Move into this new folder and launch **install.bat**. This installs the script for the local user.
+- Move into this new folder and launch **setup.pyw**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for usage instructions.
+
+### Note for Linux users
+
+Please make sure that your Python3 installation has the *tkinter* module. On Ubuntu, for example, it is not available out of the box and must be installed via a separate package. 
+
+------------------------------------------------------------------
 
 [Changelog](changelog)
 
