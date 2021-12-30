@@ -124,19 +124,16 @@ def install(pywriterPath):
     st = os.stat(installDir + '/' + APP)
     os.chmod(installDir + '/' + APP, st.st_mode | stat.S_IEXEC)
 
-    # Install configuration files, if needed.
+    # Install a configuration file, if needed.
 
     try:
-        with os.scandir(SAMPLE_PATH) as files:
+        if not os.path.isfile(cnfDir + INI_FILE):
+            copyfile(SAMPLE_PATH + INI_FILE, cnfDir + INI_FILE)
+            output('Copying "' + INI_FILE + '"')
 
-            for file in files:
+        else:
+            output('Keeping "' + INI_FILE + '"')
 
-                if not os.path.isfile(cnfDir + file.name):
-                    copyfile(SAMPLE_PATH + file.name, cnfDir + file.name)
-                    output('Copying "' + file.name + '"')
-
-                else:
-                    output('Keeping "' + file.name + '"')
     except:
         pass
 
