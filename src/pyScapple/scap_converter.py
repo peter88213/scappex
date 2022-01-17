@@ -1,6 +1,6 @@
-"""Provide a Scapple converter class for yWriter projects. 
+"""Provide a Scapple converter class for Scapple diagram import. 
 
-Copyright (c) 2021 Peter Triesberger
+Copyright (c) 2022 Peter Triesberger
 For further information see https://github.com/peter88213/scappex
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
@@ -14,11 +14,11 @@ from pyScapple.scap_file import ScapFile
 
 
 class ScapConverter(YwCnvUi):
-    """A converter class for Scapple diagram import."""
+    """A converter class for Scapple diagram import.
+    """
 
     def run(self, sourcePath, **kwargs):
         """Create source and target objects and run conversion.
-        Override the superclass method.
         """
         self.newFile = None
 

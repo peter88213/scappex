@@ -1,6 +1,6 @@
 """Provide a class for Scapple file representation.
 
-Copyright (c) 2021 Peter Triesberger
+Copyright (c) 2022 Peter Triesberger
 For further information see https://github.com/peter88213/aeon2yw
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
@@ -40,7 +40,7 @@ class ScapFile(Yw7File):
         ScapNote.majorCharaColor = kwargs['major_chara_color']
         ScapNote.minorCharaColor = kwargs['minor_chara_color']
 
-        Yw7File.__init__(self, filePath, **kwargs)
+        super().__init__(filePath, **kwargs)
         self.exportScenes = kwargs['export_scenes']
         self.exportCharacters = kwargs['export_characters']
         self.exportLocations = kwargs['export_locations']
@@ -133,7 +133,9 @@ class ScapFile(Yw7File):
         srtNotes = sorted(uidByPos.items())
 
         for srtNote in srtNotes:
-            self.chapters[chId].srtScenes.append(srtNote[1])
+
+            if srtNote[1] in self.scenes:
+                self.chapters[chId].srtScenes.append(srtNote[1])
 
         #--- Assign characters/locations/items/tags/notes to the scenes.
 
