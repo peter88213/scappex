@@ -1,4 +1,4 @@
-"""Modules for processing Scapple files.
+"""Package for processing Scapple files.
 
 Modules:
 
