@@ -23,7 +23,7 @@ class ScapConverter(YwCnvUi):
         self.newFile = None
 
         if not os.path.isfile(sourcePath):
-            self.ui.set_info_how('ERROR: File "{}" not found.'.format(os.path.normpath(sourcePath)))
+            self.ui.set_info_how(f'ERROR: File "{os.path.normpath(sourcePath)}" not found.')
             return
 
         fileName, fileExtension = os.path.splitext(sourcePath)
@@ -40,4 +40,4 @@ class ScapConverter(YwCnvUi):
                 self.create_yw7(sourceFile, targetFile)
 
         else:
-            self.ui.set_info_how('ERROR: File type of "{}" not supported.').format(os.path.normpath(sourcePath))
+            self.ui.set_info_how(f'ERROR: File type of "{os.path.normpath(sourcePath)}" not supported.')
