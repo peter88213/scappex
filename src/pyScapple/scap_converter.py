@@ -6,6 +6,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 """
 import os
 
+from pywriter.pywriter_globals import ERROR
 from pywriter.converter.yw_cnv_ui import YwCnvUi
 from pywriter.yw.yw7_file import Yw7File
 from pywriter.yw.data_files import DataFiles
@@ -23,7 +24,7 @@ class ScapConverter(YwCnvUi):
         self.newFile = None
 
         if not os.path.isfile(sourcePath):
-            self.ui.set_info_how(f'ERROR: File "{os.path.normpath(sourcePath)}" not found.')
+            self.ui.set_info_how(f'{ERROR}File "{os.path.normpath(sourcePath)}" not found.')
             return
 
         fileName, fileExtension = os.path.splitext(sourcePath)
@@ -40,4 +41,4 @@ class ScapConverter(YwCnvUi):
                 self.create_yw7(sourceFile, targetFile)
 
         else:
-            self.ui.set_info_how(f'ERROR: File type of "{os.path.normpath(sourcePath)}" not supported.')
+            self.ui.set_info_how(f'{ERROR}File type of "{os.path.normpath(sourcePath)}" not supported.')

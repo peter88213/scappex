@@ -8,6 +8,13 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.14.0 Public release
+
+- Rework the error messaging system.
+- Refactor.
+
+Based on PyWriter v5.0.0
+
 ### v0.12.4 Support non-Windows OS
 
 - Move installation and configuration to another location (see instructions for use).

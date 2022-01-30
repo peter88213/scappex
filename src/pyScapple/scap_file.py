@@ -50,7 +50,7 @@ class ScapFile(Yw7File):
     def read(self):
         """Parse the Scapple xml file, fetching the Novel attributes.
         Create an object structure of Scapple notes.
-        Return a message beginning with SUCCESS or ERROR.
+        Return a message beginning with the ERROR constant in case of error.
         Override the superclass method.
         """
 
@@ -58,7 +58,7 @@ class ScapFile(Yw7File):
             self.tree = ET.parse(self.filePath)
 
         except:
-            return f'{ERROR}: Can not process "{os.path.normpath(self.filePath)}".'
+            return f'{ERROR}Can not process "{os.path.normpath(self.filePath)}".'
 
         root = self.tree.getroot()
 
@@ -203,4 +203,4 @@ class ScapFile(Yw7File):
                 if scapNotes[uid].isTag:
                     self.items[itId].tags.append(scapNotes[uid].text)
 
-        return 'SUCCESS'
+        return 'Scapple data converted to novel structure.'
