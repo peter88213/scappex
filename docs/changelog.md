@@ -8,7 +8,7 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
-### v0.14.0 Public release
+### v0.14.0 Beta test release
 
 - Rework the error messaging system.
 - Refactor.
