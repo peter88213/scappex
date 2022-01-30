@@ -7,6 +7,7 @@ Published under the MIT License (https://opensource.org/licenses/mit-license.php
 import os
 import xml.etree.ElementTree as ET
 
+from pywriter.pywriter_globals import ERROR
 from pywriter.yw.yw7_file import Yw7File
 from pywriter.model.chapter import Chapter
 from pywriter.model.scene import Scene
@@ -57,7 +58,7 @@ class ScapFile(Yw7File):
             self.tree = ET.parse(self.filePath)
 
         except:
-            return f'ERROR: Can not process "{os.path.normpath(self.filePath)}".'
+            return f'{ERROR}: Can not process "{os.path.normpath(self.filePath)}".'
 
         root = self.tree.getroot()
 
