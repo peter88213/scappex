@@ -14,8 +14,8 @@ import inliner
 
 SRC = '../src/'
 BUILD = '../test/'
-SOURCE_FILE = 'scappex_.pyw'
-TARGET_FILE = BUILD + 'scappex.pyw'
+SOURCE_FILE = f'{SRC}scappex_.pyw'
+TARGET_FILE = f'{BUILD}scappex.pyw'
 
 
 def main():

@@ -59,8 +59,8 @@ def run(sourcePath, silentMode=True, installDir=''):
     else:
         sourceDir += '/'
 
-    iniFileName = APPNAME + '.ini'
-    iniFiles = [installDir + iniFileName, sourceDir + iniFileName]
+    iniFileName = f'{APPNAME}.ini'
+    iniFiles = [f'{installDir}{iniFileName}', f'{sourceDir}{iniFileName}']
 
     configuration = Configuration(SETTINGS, OPTIONS)
 
