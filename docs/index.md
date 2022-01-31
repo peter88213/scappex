@@ -24,9 +24,9 @@
 
 ## Download and install
 
-[Download the latest release (version 0.13.0)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.13.0.zip)
+[Download the latest release (version 0.13.1)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.13.1.zip)
 
-- Unzip the downloaded zipfile "scappex_v0.13.0.zip" into a new folder.
+- Unzip the downloaded zipfile "scappex_v0.13.1.zip" into a new folder.
 - Move into this new folder and launch **setup.pyw**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for usage instructions.
