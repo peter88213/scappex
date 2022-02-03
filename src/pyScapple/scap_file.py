@@ -42,10 +42,10 @@ class ScapFile(Yw7File):
         ScapNote.minorCharaColor = kwargs['minor_chara_color']
 
         super().__init__(filePath, **kwargs)
-        self.exportScenes = kwargs['export_scenes']
-        self.exportCharacters = kwargs['export_characters']
-        self.exportLocations = kwargs['export_locations']
-        self.exportItems = kwargs['export_items']
+        self._exportScenes = kwargs['export_scenes']
+        self._exportCharacters = kwargs['export_characters']
+        self._exportLocations = kwargs['export_locations']
+        self._exportItems = kwargs['export_items']
 
     def read(self):
         """Parse the Scapple xml file, fetching the Novel attributes.
@@ -55,12 +55,12 @@ class ScapFile(Yw7File):
         """
 
         try:
-            self.tree = ET.parse(self.filePath)
+            self._tree = ET.parse(self.filePath)
 
         except:
             return f'{ERROR}Can not process "{os.path.normpath(self.filePath)}".'
 
-        root = self.tree.getroot()
+        root = self._tree.getroot()
 
         #--- Create a single chapter and assign all scenes to it.
 
@@ -84,7 +84,7 @@ class ScapFile(Yw7File):
 
             if note.isScene:
 
-                if self.exportScenes:
+                if self._exportScenes:
                     scene = Scene()
                     scene.title = note.text
                     scene.isNotesScene = note.isNotesScene
@@ -95,7 +95,7 @@ class ScapFile(Yw7File):
 
             elif note.isMajorChara:
 
-                if self.exportCharacters:
+                if self._exportCharacters:
                     character = Character()
                     character.title = note.text
                     character.fullName = note.text
@@ -105,7 +105,7 @@ class ScapFile(Yw7File):
 
             elif note.isMinorChara:
 
-                if self.exportCharacters:
+                if self._exportCharacters:
                     character = Character()
                     character.title = note.text
                     character.fullName = note.text
@@ -115,7 +115,7 @@ class ScapFile(Yw7File):
 
             elif note.isLocation:
 
-                if self.exportLocations:
+                if self._exportLocations:
                     location = WorldElement()
                     location.title = note.text
                     self.locations[note.uid] = location
@@ -123,7 +123,7 @@ class ScapFile(Yw7File):
 
             elif note.isItem:
 
-                if self.exportItems:
+                if self._exportItems:
                     item = WorldElement()
                     item.title = note.text
                     self.items[note.uid] = item
