@@ -11,7 +11,7 @@ from pywriter.converter.yw_cnv_ui import YwCnvUi
 from pywriter.yw.yw7_file import Yw7File
 from pywriter.yw.data_files import DataFiles
 
-from pyScapple.scap_file import ScapFile
+from scappexlib.scap_file import ScapFile
 
 
 class ScapConverter(YwCnvUi):

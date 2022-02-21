@@ -14,7 +14,7 @@ from pywriter.model.scene import Scene
 from pywriter.model.character import Character
 from pywriter.model.world_element import WorldElement
 
-from pyScapple.scap_note import ScapNote
+from scappexlib.scap_note import ScapNote
 
 
 class ScapFile(Yw7File):

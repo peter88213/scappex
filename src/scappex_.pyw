@@ -15,7 +15,7 @@ from pywriter.ui.ui import Ui
 from pywriter.ui.ui_tk import UiTk
 from pywriter.config.configuration import Configuration
 
-from pyScapple.scap_converter import ScapConverter
+from scappexlib.scap_converter import ScapConverter
 
 SUFFIX = ''
 APPNAME = 'scappex'

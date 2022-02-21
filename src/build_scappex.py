@@ -21,7 +21,7 @@ TARGET_FILE = f'{BUILD}scappex.pyw'
 
 
 def main():
-    inliner.run(SOURCE_FILE,TARGET_FILE, 'pyScapple', '../src/')
+    inliner.run(SOURCE_FILE,TARGET_FILE, 'scappexlib', '../src/')
     inliner.run(TARGET_FILE, TARGET_FILE, 'pywriter', '../../PyWriter/src/')
     print('Done.')
 
