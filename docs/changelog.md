@@ -10,8 +10,8 @@ See the [GitHub "features" project](https://github.com/peter88213/scappex/projec
 
 ### v0.14.0 Beta test release
 
-- Rework the error messaging system.
-- Refactor.
+- Update the user interface.
+- Refactor the code.
 
 Based on PyWriter v5.0.0
 
