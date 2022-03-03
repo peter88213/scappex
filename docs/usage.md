@@ -126,23 +126,40 @@ This is the configuration explained:
 
 ```
 [SETTINGS]
+
 location_color = 0.0 0.0 1.0
-# Blue
+
+# RGB text color that marks the locations in Scapple.
 
 item_color = 0.0 0.5 0.0
-# Green
+
+# RGB text color that marks the items in Scapple.
 
 major_chara_color = 1.0 0.0 0.0
-# Red
+
+# RGB text color that marks the major racters in Scapple.
 
 minor_chara_color = 0.5 0.0 0.5
-# Purple
+
+# RGB text color that marks the minor characters in Scapple.
 
 [OPTIONS]
+
 export_scenes = Yes
+
+# Yes: create scenes from Scapple notes.
+
 export_characters = Yes
+
+# Yes: create characters from Scapple notes.
+
 export_locations = Yes
+
+# Yes: create location from Scapple notes.
+
 export_items = Yes
+
+# Yes: create items from Scapple notes.```
 
 ```
 

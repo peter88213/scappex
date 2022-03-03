@@ -8,6 +8,15 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+
+### v0.14.1 Beta test release
+
+- Fix a bug in the setup script where the sample configuration file is not installed.
+- Update the documentation.
+- Improve code quality.
+
+Based on PyWriter v5.0.2
+
 ### v0.14.0 Beta test release
 
 - Update the user interface.
