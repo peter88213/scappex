@@ -9,6 +9,12 @@
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
 
+### v0.14.2 Improved setup
+
+- Catch exceptions in the setup script.
+
+Based on PyWriter v5.18.0
+
 ### v0.14.1 Beta test release
 
 - Fix a bug in the setup script where the sample configuration file is not installed.
