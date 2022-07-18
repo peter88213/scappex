@@ -9,6 +9,12 @@
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
 
+### v0.14.3 Update setup script
+
+- Change the working dir to the script dir on startup in order to avoid "file not found" error.
+
+Based on PyWriter v5.18.0
+
 ### v0.14.2 Improved setup
 
 - Catch exceptions in the setup script.
