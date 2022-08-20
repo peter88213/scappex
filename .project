@@ -3,7 +3,6 @@
 	<name>scappex</name>
 	<comment></comment>
 	<projects>
-		<project>PyWriter</project>
 		<project>yw-timeline</project>
 	</projects>
 	<buildSpec>
