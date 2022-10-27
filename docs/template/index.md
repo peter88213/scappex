@@ -17,7 +17,7 @@
  
 ## Requirements
 
-- [Python 3.6+](https://www.python.org).
+- [Python](https://www.python.org/) 3.6 =< version <= 3.10.
 - [yWriter 7](http://spacejock.com/yWriter7.html).
 - [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
 
