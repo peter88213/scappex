@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Helper file for scappex test.
 
 Create config file.

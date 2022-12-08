@@ -17,16 +17,16 @@
  
 ## Requirements
 
-- [Python](https://www.python.org/) from version 3.6 to 3.10. Beware: Version 3.11 is not recommended.
+- [Python](https://www.python.org/) from version 3.6.
 - [yWriter 7](http://spacejock.com/yWriter7.html).
 - [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
 
 
 ## Download and install
 
-[Download the latest release (version 0.14.4)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.14.4.zip)
+[Download the latest release (version 0.14.5)](https://raw.githubusercontent.com/peter88213/scappex/main/dist/scappex_v0.14.5.zip)
 
-- Unzip the downloaded zipfile "scappex_v0.14.4.zip" into a new folder.
+- Unzip the downloaded zipfile "scappex_v0.14.5.zip" into a new folder.
 - Move into this new folder and launch **setup.pyw**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for usage instructions.

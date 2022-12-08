@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Install the scappex script. 
 
 Version @release

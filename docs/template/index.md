@@ -17,7 +17,7 @@
  
 ## Requirements
 
-- [Python](https://www.python.org/) from version 3.6 to 3.10. Beware: Version 3.11 is not recommended.
+- [Python](https://www.python.org/) from version 3.6.
 - [yWriter 7](http://spacejock.com/yWriter7.html).
 - [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
 
