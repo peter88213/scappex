@@ -8,6 +8,12 @@
 
 See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
 
+### v0.14.6
+
+- Make it run with old Windows versions.
+
+Based on PyWriter v6.0.2
+
 ### v0.14.5
 
 - Remove "shebang" to make the program run with Python 3.11.
