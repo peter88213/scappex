@@ -6,7 +6,7 @@
 
 ### Planned features
 
-See the [GitHub "features" project](https://github.com/peter88213/scappex/projects/1).
+See the [GitHub "features" project](https://github.com/users/peter88213/projects/6/views/1).
 
 ### v0.14.6
 
