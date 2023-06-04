@@ -1,4 +1,4 @@
-""" Build a python script for the aeon2yw distribution.
+""" Build a python script for the scappex distribution.
         
 In order to distribute a single script without dependencies, 
 this script "inlines" all modules imported from the pywriter package.

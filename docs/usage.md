@@ -14,7 +14,7 @@ The included installation script prompts you to create a shortcut on the desktop
 
 Alternatively, you can
 
-- launch the program on the command line passing the yWriter project file as an argument, or
+- launch the program on the command line passing the scapple file as an argument, or
 - launch the program via a batch file.
 
 usage: `scappex.pyw [--silent] Sourcefile`
@@ -32,7 +32,7 @@ The path of the Scapple outline file.
 ## Mode of operation
 
 *Scappex* generates a new yWriter project file with the same file name as the Scapple source file, 
-but with the extension `.yw`. It is placed in the same directory as the source file. 
+but with the extension `.yw7`. It is placed in the same directory as the source file. 
 
 However, **if the yWriter project already exists, it would not be overwritten**. Character/Location/Item 
 XML files are generated instead. They can be imported into any yWriter project.
