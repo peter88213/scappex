@@ -1,7 +1,6 @@
-""" Regression test for the scappex project.
+"""Regression test for the scappex project.
 
-Test suite for scappex.pyw.
-
+Copyright (c) 2023 Peter Triesberger
 For further information see https://github.com/peter88213/scappex
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
@@ -9,7 +8,6 @@ from shutil import copyfile
 import os
 import unittest
 import scappex_
-
 
 # Test environment
 
