@@ -1,4 +1,4 @@
-""" Python unit tests for the scappex project.
+""" Regression test for the scappex project.
 
 Test suite for scappex.pyw.
 
