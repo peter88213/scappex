@@ -48,6 +48,10 @@
 			<fileset dir="../sample" />
 		</copy>		
 			
+		<copy todir="${build-path}/${release}/icons" failonerror="false"> 
+			<fileset dir="../icons" />
+		</copy>		
+			
 		<zip destfile="${dist-path}/${release}.zip" basedir="${build-path}/${release}" />
 		
 		<copy file="${docs-path}/template/index.md" overwrite="True" todir="${docs-path}" />

@@ -19,7 +19,7 @@
 
 - [Python](https://www.python.org/) version 3.6+.
 - [yWriter 7](http://spacejock.com/yWriter7.html).
-- [Scapple 1.2.6](https://www.literatureandlatte.com/scapple/overview).
+- [Scapple 1.x](https://www.literatureandlatte.com/scapple/overview).
 
 
 ## Download and install
