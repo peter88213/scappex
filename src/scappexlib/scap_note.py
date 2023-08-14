@@ -5,6 +5,7 @@ For further information see https://github.com/peter88213/scappex
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
 
+
 class ScapNote:
     """Scapple note representation.
     
@@ -66,14 +67,14 @@ class ScapNote:
                 return (0.0, 0.0, 0.0)
 
         def color_matches(color1, color2):
-            """Return True if color1 is close to textColor 2, otherwise return False."""
+            """Return True if color1 is close to color2, otherwise return False."""
             TOLERANCE = 0.1
             c1 = str_to_rgb(color1)
             c2 = str_to_rgb(color2)
             for i in range(3):
                 if abs(c1[i] - c2[i]) > TOLERANCE:
                     return False
-            
+
             return True
 
         self.isScene = False
