@@ -18,7 +18,6 @@
 ## Requirements
 
 - [Python](https://www.python.org/) version 3.6+.
-- [yWriter 7](http://spacejock.com/yWriter7.html).
 - [Scapple 1.x](https://www.literatureandlatte.com/scapple/overview).
 
 
