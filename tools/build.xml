@@ -14,7 +14,7 @@
 	<target name="build" description="inline all library modules">
 		<delete file="${test-path}/${test-app}.pyw" />
 		<exec executable="python" failonerror="true">
-		    <arg value="${source-path}/build_${test-app}.py"/>
+		    <arg value="build_${test-app}.py"/>
 		</exec>
 	</target>
 
