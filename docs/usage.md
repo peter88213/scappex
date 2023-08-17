@@ -1,6 +1,6 @@
-[Project homepage](https://peter88213.github.io/scappex)
+[Project homepage](https://peter88213.github.io/scappex) > Instructions for use
 
-------------------------------------------------------------------
+---
 
 The scappex Python script creates a yWriter 7 project from a Scapple outline.
 
