@@ -8,6 +8,8 @@ For more information, see the [project homepage](https://peter88213.github.io/sc
 
 Please note that the program has not yet been extensively tested. To me, it's actually just a proof of concept. I probably won't develop the program further. Feel free to copy the project and modify it to your own liking.
 
+## Development
+
 ### Conventions
 
 See https://github.com/peter88213/PyWriter/blob/main/docs/conventions.md
