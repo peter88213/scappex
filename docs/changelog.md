@@ -8,6 +8,13 @@
 
 See the [GitHub "Features" project](https://github.com/users/peter88213/projects/6/views/1).
 
+### v0.14.7
+
+- Fix a bug in the setup script that may cause problems when updating an older scappex version.
+- Pack the whole folder when building the release.
+
+Based on PyWriter v6.0.2
+
 ### v0.14.6
 
 - Make it run with old Windows versions.
